@@ -60,6 +60,7 @@ type Props = CollectionEntry<"blog">;
 Similar to above reference `post.data.title` using `createSlug` instead of `post.slug`
 
 ```diff
+// src/pages/blog/index.astro
 -  <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
 +  <a href={`/blog/${createSlug(post.data.title)}/`}>
 +    {post.data.title}
