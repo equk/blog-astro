@@ -5,12 +5,14 @@ specifiers:
   '@astrojs/rss': ^2.1.0
   '@astrojs/sitemap': ^1.0.0
   astro: ^2.0.2
+  moment: ^2.29.4
 
 dependencies:
   '@astrojs/mdx': 0.15.2_astro@2.0.4
   '@astrojs/rss': 2.1.0
   '@astrojs/sitemap': 1.0.0
   astro: 2.0.4
+  moment: 2.29.4
 
 packages:
 
@@ -2416,6 +2418,10 @@ packages:
   /mimic-fn/4.0.0:
     resolution: {integrity: sha512-vqiC06CuhBTUdZH+RYl8sFrL096vA45Ok5ISO6sE/Mr1jRbGH4Csnhi8f3wKVl7x8mO4Au7Ir9D3Oyv1VYMFJw==}
     engines: {node: '>=12'}
+    dev: false
+
+  /moment/2.29.4:
+    resolution: {integrity: sha512-5LC9SOxjSc2HF6vO2CyuTDNivEdoz2IvyJJGj6X8DJ0eFyfszE0QiEd+iXmBvUP3WHxSjFH/vIsA0EN00cgr8w==}
     dev: false
 
   /mri/1.2.0:

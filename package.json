@@ -12,9 +12,10 @@
     "newpost": "node newpost.cjs"
   },
   "dependencies": {
-    "astro": "^2.0.2",
     "@astrojs/mdx": "^0.15.1",
     "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.0"
+    "@astrojs/sitemap": "^1.0.0",
+    "astro": "^2.0.2",
+    "moment": "^2.29.4"
   }
 }
