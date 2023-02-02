@@ -70,8 +70,14 @@ Similar to above call `slugDate` referencing `post.data.date` aswell as `createS
 ```diff
 // src/pages/blog/index.astro
 -  <a href={`/blog/${createSlug(post.data.title)}/`}>
-+  <a href={`/${slugDate(post.data.date.toISOString())}
++  <a href={`/blog/${slugDate(post.data.date.toISOString())}
 +  ${createSlug(post.data.title)}/`}>
     {post.data.title}
   </a>
 ```
+
+## bonus
+
+Now all blog posts are using `YYYY/MM/DD/title` there is no need for `/blog/` so it is now possible to move `src/pages/blog/[...slug].astro` to `src/pages/[...slug].astro` as all blog posts will have unique slugs.
+
+This cleans up urls a bit & is the same setup I have on my gatsby site.
