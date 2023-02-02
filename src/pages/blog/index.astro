@@ -5,6 +5,7 @@ import Footer from "../../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
 import { getCollection } from "astro:content";
 import createSlug from "../../lib/createSlug";
+import slugDate from "../../lib/slugDate";
 
 const posts = (await getCollection("blog")).sort(
 	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
@@ -54,9 +55,9 @@ const posts = (await getCollection("blog")).sort(
 									)}
 								</time>
 								<a
-									href={`/blog/${createSlug(
-										post.data.title
-									)}/`}
+									href={`/blog/${slugDate(
+										post.data.pubDate.toISOString()
+									)}${createSlug(post.data.title)}/`}
 								>
 									{post.data.title}
 								</a>
