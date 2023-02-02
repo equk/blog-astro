@@ -35,7 +35,7 @@ rl.question('Post Title:', (title) => {
     process.exit(1)
   }
 
-  const output = `---\nslug: ""\ntitle: "${title}"\ndescription: ""\npubDate: ${dateNow.toISOString()}\ndraft: true\nauthor: ${author}\ntags:\nheroImage: ""\n---\n\n`
+  const output = `---\nslug: ""\ntitle: "${title}"\ndescription: ""\ndate: ${dateNow.toISOString()}\ndraft: true\nauthor: ${author}\ntags:\nheroImage: ""\n---\n\n`
 
   fs.writeFileSync(`${blogPostDate}-${title}.md`, output)
 

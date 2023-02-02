@@ -8,7 +8,7 @@ import createSlug from "../../lib/createSlug";
 import slugDate from "../../lib/slugDate";
 
 const posts = (await getCollection("blog")).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+	(a, b) => a.data.date.valueOf() - b.data.date.valueOf()
 );
 ---
 
@@ -43,9 +43,9 @@ const posts = (await getCollection("blog")).sort(
 						posts.map((post) => (
 							<li>
 								<time
-									datetime={post.data.pubDate.toISOString()}
+									datetime={post.data.date.toISOString()}
 								>
-									{post.data.pubDate.toLocaleDateString(
+									{post.data.date.toLocaleDateString(
 										"en-us",
 										{
 											year: "numeric",
@@ -56,7 +56,7 @@ const posts = (await getCollection("blog")).sort(
 								</time>
 								<a
 									href={`/${slugDate(
-										post.data.pubDate.toISOString()
+										post.data.date.toISOString()
 									)}${createSlug(post.data.title)}/`}
 								>
 									{post.data.title}
