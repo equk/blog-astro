@@ -1,11 +1,11 @@
 ---
-import BaseHead from "../../components/BaseHead.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@consts";
 import { getCollection } from "astro:content";
-import createSlug from "../../lib/createSlug";
-import slugDate from "../../lib/slugDate";
+import createSlug from "@lib/createSlug";
+import slugDate from "@lib/slugDate";
 
 const posts = (await getCollection("blog")).sort(
 	(a, b) => a.data.date.valueOf() - b.data.date.valueOf()
@@ -42,9 +42,7 @@ const posts = (await getCollection("blog")).sort(
 					{
 						posts.map((post) => (
 							<li>
-								<time
-									datetime={post.data.date.toISOString()}
-								>
+								<time datetime={post.data.date.toISOString()}>
 									{post.data.date.toLocaleDateString(
 										"en-us",
 										{
