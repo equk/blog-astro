@@ -1,8 +1,8 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content'
-import BlogPost from '../layouts/BlogPost.astro'
-import createSlug from '../lib/createSlug'
-import slugDate from '../lib/slugDate'
+import BlogPost from '~/layouts/BlogPost.astro'
+import createSlug from '~/lib/createSlug'
+import slugDate from '~/lib/slugDate'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog')
