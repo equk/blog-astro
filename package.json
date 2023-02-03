@@ -18,8 +18,10 @@
     "@astrojs/mdx": "^0.15.1",
     "@astrojs/rss": "^2.1.0",
     "@astrojs/sitemap": "^1.0.0",
+    "@unocss/reset": "^0.49.4",
     "astro": "^2.0.2",
-    "moment": "^2.29.4"
+    "moment": "^2.29.4",
+    "unocss": "^0.49.4"
   },
   "devDependencies": {
     "@typescript-eslint/parser": "^5.50.0",
