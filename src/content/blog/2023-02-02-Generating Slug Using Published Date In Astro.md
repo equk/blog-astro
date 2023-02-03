@@ -1,12 +1,12 @@
 ---
-slug: ""
-title: "Generating Slug Using Published Date In Astro"
-description: ""
+slug: ''
+title: 'Generating Slug Using Published Date In Astro'
+description: ''
 date: 2023-02-02T15:31:23.725Z
 draft: true
 author: equilibriumuk
 tags:
-heroImage: "/placeholder-hero.jpg"
+heroImage: '/placeholder-hero.jpg'
 ---
 
 This is an extension to [Generating Slug From Title In Astro](/2023/02/02/generating-slug-from-title-in-astro/)
@@ -32,9 +32,9 @@ Next create a new function in `src/lib/slugDate.ts`
 import { default as moment } from 'moment'
 
 export default function (date: string) {
-    const m = moment(date);
-    date = `${m.format('YYYY')}/${m.format('MM')}/${m.format('DD')}/`
-    return date
+  const m = moment(date)
+  date = `${m.format('YYYY')}/${m.format('MM')}/${m.format('DD')}/`
+  return date
 }
 ```
 
@@ -42,8 +42,7 @@ export default function (date: string) {
 
 Call `slugDate` referencing `post.data.date` aswell as `createSlug` referencing `post.data.title`.
 
-*`toISOString` is required to change date to a string for types.*
-
+_`toISOString` is required to change date to a string for types._
 
 ```diff
 // src/pages/blog/[...slug].astro
@@ -65,7 +64,6 @@ type Props = CollectionEntry<"blog">;
 ## blog post links
 
 Similar to above call `slugDate` referencing `post.data.date` aswell as `createSlug` referencing `post.data.title`
-
 
 ```diff
 // src/pages/blog/index.astro

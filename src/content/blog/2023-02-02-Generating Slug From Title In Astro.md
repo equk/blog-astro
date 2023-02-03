@@ -1,12 +1,12 @@
 ---
-slug: ""
-title: "Generating Slug From Title In Astro"
-description: ""
+slug: ''
+title: 'Generating Slug From Title In Astro'
+description: ''
 date: 2023-02-02T15:03:12.984Z
 draft: true
 author: equilibriumuk
 tags:
-heroImage: "/placeholder-hero.jpg"
+heroImage: '/placeholder-hero.jpg'
 ---
 
 By default astro generates slug using filenames.
@@ -24,17 +24,19 @@ This is a simple function which formats the title into a slug.
 ```ts
 // src/lib/createSlug.ts
 export default function (title: string) {
-    return title
-        // remove leading & trailing whitespace
-        .trim()
-        // remove special characters
-        .replace(/[^A-Za-z0-9 ]/g, "")
-        // replace spaces
-        .replace(/\s+/g, "-")
-        // remove leading & trailing separtors
-        .replace(/^-+|-+$/g, '')
-        // output lowercase
-        .toLowerCase();
+  return (
+    title
+      // remove leading & trailing whitespace
+      .trim()
+      // remove special characters
+      .replace(/[^A-Za-z0-9 ]/g, '')
+      // replace spaces
+      .replace(/\s+/g, '-')
+      // remove leading & trailing separtors
+      .replace(/^-+|-+$/g, '')
+      // output lowercase
+      .toLowerCase()
+  )
 }
 ```
 
