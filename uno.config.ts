@@ -3,11 +3,13 @@ import {
     presetUno,
     transformerDirectives,
     transformerVariantGroup,
+    presetTypography,
 } from 'unocss'
 
 export default defineConfig({
     presets: [
-        presetUno()
+        presetUno(),
+        presetTypography(),
     ],
     transformers: [
         transformerDirectives(),
