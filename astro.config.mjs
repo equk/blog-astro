@@ -7,5 +7,11 @@ import sitemap from '@astrojs/sitemap'
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
+  markdown: {
+    shikiConfig: {
+      theme: "dracula",
+      wrap: true,
+    },
+  },
   integrations: [mdx(), sitemap(), UnoCSS()],
 })
