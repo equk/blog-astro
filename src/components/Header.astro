@@ -3,27 +3,93 @@ import HeaderLink from '~/components/HeaderLink.astro'
 import { SITE_TITLE } from '~/consts'
 ---
 
-<header>
-  <h2>
-    {SITE_TITLE}
-  </h2>
-  <nav>
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/blog">Blog</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">
-      Twitter
-    </HeaderLink>
-    <HeaderLink href="https://github.com/withastro/astro" target="_blank">
-      GitHub
-    </HeaderLink>
-  </nav>
+<header class="mx-auto w-full duration-100 ease-in flex-none">
+  <div
+    class="mx-auto max-w-7xl md:flex md:justify-between md:px-4 md:py-3.5 px-3 py-3 w-full"
+  >
+    <div class="flex justify-between">
+      <a class="flex items-center" href="/"
+        ><span
+          class="font-bold dark:text-white text-2xl md:text-xl ml-2 self-center text-gray-900 whitespace-nowrap"
+          >{SITE_TITLE}</span
+        ></a
+      ><div class="flex items-center md:hidden">
+        <button
+          class="text-muted dark:text-gray-400 dark:focus:ring-gray-700 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 inline-flex items-center p-2.5 rounded-lg text-sm"
+          aria-label="Toggle between Dark and Light mode"
+          type="button"
+          data-aw-toggle-color-scheme=""
+          ><svg astro-icon="tabler:sun" class="h-6 w-6" viewBox="0 0 24 24"
+            ><g
+              fill="none"
+              class="icon-tabler"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              ><circle cx="12" cy="12" r="4"></circle><path
+                d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"
+              ></path></g
+            ></svg
+          ></button
+        >
+        <button
+          class="dark:text-gray-400 transition dark:focus:ring-gray-700 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 inline-flex items-center ml-1.5 p-2.5 rounded-lg text-gray-500 text-sm"
+          aria-label="Toggle Menu"
+          type="button"
+          data-aw-toggle-menu=""
+          ><svg
+            astro-icon="tabler:menu"
+            class="h-6 w-6"
+            viewBox="0 0 24 24"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            ><g
+              fill="none"
+              class="icon-tabler"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              ><path d="M4 8h16"></path><path d="M4 16h16"></path></g
+            ></svg
+          ></button
+        >
+      </div>
+    </div><nav
+      aria-label="Main navigation"
+      class="w-full md:w-auto dark:text-slate-200 h-[calc(100vh-72px)] hidden items-center md:flex md:h-auto md:mx-5 md:overflow-visible overflow-y-auto"
+    >
+      <ul
+        class="flex flex-col md:flex-row md:pt-0 md:self-center md:text-base md:w-auto pt-8 text-xl w-full"
+      >
+        <li><HeaderLink href="/">Home</HeaderLink></li>
+        <li><HeaderLink href="/blog">Blog</HeaderLink></li>
+        <li><HeaderLink href="/about">About</HeaderLink></li>
+      </ul><div class="flex items-center md:mb-0 md:self-center">
+        <div class="hidden items-center md:flex">
+          <button
+            class="text-muted dark:text-gray-400 dark:focus:ring-gray-700 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 inline-flex items-center p-2.5 rounded-lg text-sm"
+            aria-label="Toggle between Dark and Light mode"
+            type="button"
+            data-aw-toggle-color-scheme=""
+            ><svg astro-icon="tabler:sun" class="h-5 w-5" viewBox="0 0 24 24"
+              ><g
+                fill="none"
+                class="icon-tabler"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                ><circle cx="12" cy="12" r="4"></circle><path
+                  d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"
+                ></path></g
+              ></svg
+            >
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
 </header>
-<style>
-  header {
-    margin: 0em 0 2em;
-  }
-  h2 {
-    margin: 0.5em 0;
-  }
-</style>
