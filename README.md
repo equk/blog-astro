@@ -1,5 +1,17 @@
 # Astro Starter Kit: Blog
 
+## Features
+
+- [x] SEO-friendly with canonical URLs and OpenGraph data
+- [x] Sitemap support
+- [x] RSS Feed support
+- [x] Markdown & MDX support
+- [x] Blog post slug is generated from date & title
+- [x] Blog posts url format: `/YYYY/MM/DD/TITLE`
+- [x] ESLint
+- [x] Prettier
+- [x] UnoCSS
+
 ## Changelog
 
 * moved blogposts to base dir as they should now be unique as they use pubDate
@@ -27,17 +39,6 @@
 ```
 npm create astro@latest -- --template blog
 ```
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-- [x] Blog post slug is generated from date & title
-- [x] Blog posts url format: `/YYYY/MM/DD/TITLE`
 
 ## Project Structure
 
