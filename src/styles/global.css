@@ -1,8 +1,13 @@
 /*
-  The CSS in this style tag is based off of Bear Blog's default CSS.
-  https://github.com/HermanMartinus/bearblog/blob/297026a877bc2ab2b3bdfbd6b9f7961c350917dd/templates/styles/blog/default.css
-  License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
+  -----------------------------------------
+  Global CSS Styles
+  -----------------------------------------
+  equk astro blog
+  https://github.com/equk/
  */
+
+/* Base Styles */
+
 body {
   font-family: Open Sans, Cantarell, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   margin: auto;
@@ -10,61 +15,12 @@ body {
   text-align: left;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-  color: #222;
-}
-
 a {
-  color: #3273dc;
+  color: #0282c9;
 }
 
 nav a {
   margin-right: 10px;
-}
-
-textarea {
-  width: 100%;
-}
-
-content {
-  line-height: 1.6;
-}
-
-table {
-  width: 100%;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-code {
-  padding: 2px 5px;
-  background-color: #f2f2f2;
-}
-
-pre {
-  padding: 1rem;
-}
-
-pre>code {
-  all: unset;
-}
-
-blockquote {
-  border: 1px solid #999;
-  color: #222;
-  padding: 2px 0px 2px 20px;
-  margin: 0px;
-  font-style: italic;
 }
 
 /* UnoCSS Styles */
