@@ -1,5 +1,6 @@
 ---
 import HeaderLink from '~/components/HeaderLink.astro'
+import ToggleDark from '~/components/ToggleDark.astro'
 ---
 
 <header class="mx-auto w-full duration-100 ease-in flex-none">
@@ -66,25 +67,7 @@ import HeaderLink from '~/components/HeaderLink.astro'
         <li><HeaderLink href="/about">About</HeaderLink></li>
       </ul><div class="flex items-center md:mb-0 md:self-center">
         <div class="hidden items-center md:flex">
-          <button
-            class="text-muted dark:text-gray-400 dark:focus:ring-gray-700 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 inline-flex items-center p-2.5 rounded-lg text-sm"
-            aria-label="Toggle between Dark and Light mode"
-            type="button"
-            data-aw-toggle-color-scheme=""
-            ><svg astro-icon="tabler:sun" class="h-5 w-5" viewBox="0 0 24 24"
-              ><g
-                fill="none"
-                class="icon-tabler"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                ><circle cx="12" cy="12" r="4"></circle><path
-                  d="M3 12h1m8-9v1m8 8h1m-9 8v1M5.6 5.6l.7.7m12.1-.7-.7.7m0 11.4.7.7m-12.1-.7-.7.7"
-                ></path></g
-              ></svg
-            >
-          </button>
+          <ToggleDark />
         </div>
       </div>
     </nav>
