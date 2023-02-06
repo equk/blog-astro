@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config'
 import mdx from '@astrojs/mdx'
-import UnoCSS from 'unocss/astro'
+import tailwind from "@astrojs/tailwind"
 
 import sitemap from '@astrojs/sitemap'
 
@@ -13,5 +13,13 @@ export default defineConfig({
       wrap: true,
     },
   },
-  integrations: [mdx(), sitemap(), UnoCSS()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    tailwind({
+      config: {
+        applyBaseStyles: false,
+      },
+    }),
+  ],
 })
