@@ -13,12 +13,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
   <body>
     <Header title={SITE_TITLE} />
     <main>
-      <div class="pb-8" style="grid-template-rows: auto 1fr">
+      <div
+        class="post-content"
+        style="mx-auto max-w-3xl grid-template-rows: auto 1fr"
+      >
         <div class="xl:col-span-3 xl:row-span-2 xl:pb-0">
           <div
             class="prose prose-lg max-w-none pb-8 dark:prose-dark md:prose-xl"
           >
-            <h1>🧑‍🚀 Hello, Astronaut!</h1>
+            <h1 class="text-center font-bold dark:text-gray-100 text-4xl pb-8">
+              🧑‍🚀 Hello, Astronaut!
+            </h1>
             <p>
               Welcome to the official <a href="https://astro.build/">Astro</a> blog
               starter template. This template serves as a lightweight, minimally-styled
