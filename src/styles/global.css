@@ -50,3 +50,27 @@ nav a {
     @apply pb-8;
   }
 }
+
+/* Task Lists */
+
+li.task-list-item {
+  list-style: none;
+  margin-left: 0px;
+}
+
+/* inline code */
+
+:not(pre)>code {
+  background-color: #eef9ff !important;
+  border-radius: .3125rem !important;
+  color: #0282c9 !important;
+  font-family: monospace !important;
+  padding: .2rem .4rem !important;
+  font-size: .9rem !important;
+  font-weight: normal !important;
+}
+
+.prose :where(:not(pre) > code):not(:where(.not-prose, .not-prose *))::before,
+.prose :where(:not(pre) > code):not(:where(.not-prose, .not-prose *))::after {
+  content: "";
+}
