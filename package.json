@@ -11,8 +11,8 @@
     "astro": "astro",
     "newpost": "node newpost.cjs",
     "lint": "eslint .",
-    "format": "prettier --write --plugin-search-dir=. .",
-    "format:check": "prettier --check --plugin-search-dir=. ."
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@astrojs/mdx": "^0.16.0",
