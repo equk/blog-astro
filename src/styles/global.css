@@ -4,7 +4,7 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
 body {
-  font-family: Verdana, sans-serif;
+  font-family: Open Sans, Cantarell, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   margin: auto;
   padding: 0;
   text-align: left;
@@ -75,6 +75,22 @@ blockquote {
   }
 
   html body {
-    @apply mx-auto flex h-full max-w-3xl flex-col bg-bgColor px-8 pt-16 font-normal text-textColor antialiased;
+    @apply mx-auto flex h-full container flex-col bg-bgColor px-8 pt-16 font-normal text-textColor antialiased;
+  }
+
+  main {
+    @apply mx-auto max-w-6xl;
+  }
+
+  main header {
+    @apply mx-auto max-w-5xl;
+  }
+
+  main .post-content {
+    @apply mx-auto max-w-4xl pb-8;
+  }
+
+  main .hero-image {
+    @apply pb-8;
   }
 }
