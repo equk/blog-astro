@@ -6,7 +6,7 @@ date: 2023-02-02T15:31:23.725Z
 draft: true
 author: equilibriumuk
 tags:
-heroImage: '/placeholder-hero.jpg'
+heroImage: '/media/images/unsplash_js_banner.webp'
 ---
 
 This is an extension to [Generating Slug From Title In Astro](/2023/02/02/generating-slug-from-title-in-astro/)
