@@ -1,13 +1,10 @@
-# Ignore everything
-/*
-
-# Except these files & folders
-!/src
-!/public
-!/.github
-!tsconfig.json
-!astro.config.mjs
-!package.json
-!.prettierrc.cjs
-!.eslintrc.cjs
-!newpost.cjs
+# node_modules
+**/node_modules/**
+# cache-dirs
+**/.cache
+# astro types
+**/.astro
+# pnpm lockfile
+pnpm-lock.yaml
+# built site
+dist
