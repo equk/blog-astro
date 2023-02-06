@@ -35,7 +35,7 @@ module.exports = {
         DEFAULT: {
           css: {
             '--tw-prose-body': 'var(--theme-text)',
-            '--tw-prose-headings': 'var(--theme-accent-2)',
+            '--tw-prose-headings': 'var(--theme-text)',
             '--tw-prose-links': 'var(--theme-text)',
             '--tw-prose-bold': 'var(--theme-text)',
             '--tw-prose-bullets': 'var(--theme-text)',
@@ -46,17 +46,13 @@ module.exports = {
             strong: {
               fontWeight: '700',
             },
-            code: {
-              border: '1px dotted #666',
-              borderRadius: '2px',
-            },
           },
         },
       }),
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    // require('@tailwindcss/typography'),
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
   ],
