@@ -39,7 +39,7 @@ body.dark {
   }
 
   html body {
-    @apply mx-auto flex h-full container flex-col bg-bgColor px-8 pt-16 font-normal text-textColor antialiased;
+    @apply mx-auto flex h-full flex-col bg-bgColor px-8 pt-16 font-normal text-textColor antialiased;
   }
 
   main {

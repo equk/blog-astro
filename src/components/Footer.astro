@@ -1,13 +1,28 @@
 ---
-const today = new Date()
+const year = new Date().getFullYear()
 ---
 
 <footer>
-  &copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+  <div class="mx-auto max-w-6xl md:flex md:justify-between w-full">
+    <div class="mr-0 sm:mr-4">
+      Copyright &copy; {year} equk.co.uk
+    </div>
+    <nav aria-label="More on this site" class="flex gap-x-2 sm:gap-x-0">
+      <a
+        href="/"
+        class="px-4 py-2 sm:py-0 sm:px-2 sm:hover:text-textColor sm:hover:underline"
+        >Home</a
+      >
+      <a
+        href="/blog"
+        class="px-4 py-2 sm:py-0 sm:px-2 sm:hover:text-textColor sm:hover:underline"
+        >Blog</a
+      >
+      <a
+        href="/about"
+        class="px-4 py-2 sm:py-0 sm:px-2 sm:hover:text-textColor sm:hover:underline"
+        >About</a
+      >
+    </nav>
+  </div>
 </footer>
-<style>
-  footer {
-    padding: 25px;
-    text-align: center;
-  }
-</style>
