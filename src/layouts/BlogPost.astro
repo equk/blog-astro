@@ -72,12 +72,9 @@ const { title, description, date, updatedDate, heroImage } = Astro.props
             </div>
           )
         }
-        <div
-          class="post-content"
-          style="mx-auto max-w-3xl grid-template-rows: auto 1fr"
-        >
+        <div class="post-content" style="grid-template-rows: auto 1fr">
           <div class="xl:col-span-3 xl:row-span-2 xl:pb-0">
-            <div class="prose mx-auto max-w-screen-md lg:prose-lg">
+            <div class="prose mx-auto max-w-none lg:prose-lg">
               <slot />
             </div>
           </div>
