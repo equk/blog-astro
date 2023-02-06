@@ -30,7 +30,7 @@ const { title, description, date, updatedDate, heroImage } = Astro.props
       <article>
         <header class="pb-16 pt-24">
           <div class="space-y-4">
-            <h1 class="text-center font-bold dark:text-gray-100 text-4xl">
+            <h1 class="text-center text-4xl font-bold dark:text-gray-100">
               {title}
             </h1>
             <dl>
@@ -77,9 +77,7 @@ const { title, description, date, updatedDate, heroImage } = Astro.props
           style="mx-auto max-w-3xl grid-template-rows: auto 1fr"
         >
           <div class="xl:col-span-3 xl:row-span-2 xl:pb-0">
-            <div
-              class="prose prose-lg max-w-none pb-8 dark:prose-dark md:prose-xl"
-            >
+            <div class="prose mx-auto max-w-screen-md lg:prose-lg">
               <slot />
             </div>
           </div>

@@ -3,17 +3,17 @@ import HeaderLink from '~/components/HeaderLink.astro'
 import ToggleDark from '~/components/ToggleDark.astro'
 ---
 
-<header class="mx-auto w-full duration-100 ease-in flex-none">
-  <div class="mx-auto max-w-6xl md:flex md:justify-between w-full">
+<header class="mx-auto w-full flex-none duration-100 ease-in">
+  <div class="mx-auto w-full max-w-6xl md:flex md:justify-between">
     <div class="flex justify-between">
       <a class="flex items-center" href="/"
         ><span
-          class="dark:text-white text-3xl ml-2 self-center text-gray-900 whitespace-nowrap"
+          class="ml-2 self-center whitespace-nowrap text-3xl text-gray-900 dark:text-white"
           >equk</span
         ></a
       ><div class="flex items-center md:hidden">
         <button
-          class="text-muted dark:text-gray-400 dark:focus:ring-gray-700 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 inline-flex items-center p-2.5 rounded-lg text-sm"
+          class="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
           aria-label="Toggle between Dark and Light mode"
           type="button"
           data-aw-toggle-color-scheme=""
@@ -32,7 +32,7 @@ import ToggleDark from '~/components/ToggleDark.astro'
           ></button
         >
         <button
-          class="dark:text-gray-400 transition dark:focus:ring-gray-700 dark:hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 inline-flex items-center ml-1.5 p-2.5 rounded-lg text-gray-500 text-sm"
+          class="ml-1.5 inline-flex items-center rounded-lg p-2.5 text-sm text-gray-500 transition hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-800 dark:focus:ring-gray-700"
           aria-label="Toggle Menu"
           type="button"
           data-aw-toggle-menu=""
@@ -57,10 +57,10 @@ import ToggleDark from '~/components/ToggleDark.astro'
       </div>
     </div><nav
       aria-label="Main navigation"
-      class="w-full md:w-auto dark:text-slate-200 h-[calc(100vh-72px)] hidden items-center md:flex md:h-auto md:mx-5 md:overflow-visible overflow-y-auto"
+      class="hidden h-[calc(100vh-72px)] w-full items-center overflow-y-auto dark:text-slate-200 md:mx-5 md:flex md:h-auto md:w-auto md:overflow-visible"
     >
       <ul
-        class="flex flex-col md:flex-row md:pt-0 md:self-center md:text-base md:w-auto pt-8 text-xl w-full"
+        class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
       >
         <li><HeaderLink href="/">Home</HeaderLink></li>
         <li><HeaderLink href="/blog">Blog</HeaderLink></li>
