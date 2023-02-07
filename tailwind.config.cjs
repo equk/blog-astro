@@ -28,8 +28,9 @@ module.exports = {
       },
       fontFamily: {
         // Add any custom fonts here
-        sans: [...fontFamily.sans],
+        sans: ['Open Sans', ...fontFamily.sans],
         serif: [...fontFamily.serif],
+        mono: ['Fira Mono', ...fontFamily.mono],
       },
       typography: (theme) => ({
         DEFAULT: {
