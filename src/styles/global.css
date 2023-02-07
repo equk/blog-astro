@@ -270,3 +270,24 @@ main h5,
 main h6 {
   text-transform: capitalize;
 }
+
+/* Hero Image */
+
+main .hero-image img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wide Elements */
+
+@media only screen and (min-width: 960px) {
+
+  blockquote,
+  pre,
+  article.message {
+    -webkit-transform: translateX(-60px);
+    transform: translateX(-60px);
+    max-width: none !important;
+    width: 1016px;
+  }
+}
