@@ -3,7 +3,7 @@ import BaseHead from '~/components/BaseHead.astro'
 import BaseScript from '~/components/BaseScript.astro'
 import Header from '~/components/Header.astro'
 import Footer from '~/components/Footer.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '~/consts'
+import { siteConfig } from '~/config'
 import { getCollection } from 'astro:content'
 import createSlug from '~/lib/createSlug'
 import slugDate from '~/lib/slugDate'
@@ -16,7 +16,7 @@ const posts = (await getCollection('blog')).sort(
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead title={siteConfig.title} description={siteConfig.description} />
     <BaseScript />
   </head>
   <body>
