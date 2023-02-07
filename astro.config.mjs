@@ -8,10 +8,7 @@ import sitemap from '@astrojs/sitemap'
 export default defineConfig({
   site: 'https://example.com',
   markdown: {
-    shikiConfig: {
-      theme: 'github-dark-dimmed',
-      wrap: true,
-    },
+    syntaxHighlight: 'prism',
   },
   integrations: [
     mdx(),
