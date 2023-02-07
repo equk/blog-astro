@@ -12,16 +12,35 @@ const { title, description, date, updatedDate, heroImage } = Astro.props
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
-    <style>
-      .title {
-        font-size: 2em;
-        margin: 0.25em 0 0;
+
+    <script>
+      const root = document.documentElement
+
+      function getThemePref() {
+        if (
+          typeof localStorage !== 'undefined' &&
+          localStorage.getItem('theme')
+        ) {
+          return localStorage.getItem('theme')
+        }
+        return window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
       }
-      hr {
-        border-top: 1px solid #ddd;
-        margin: 1rem 0;
-      }
-    </style>
+
+      const isDark = getThemePref() === 'dark'
+
+      const observer = new MutationObserver(() => {
+        const rootIsDark = root.classList.contains('dark')
+
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('theme', rootIsDark ? 'dark' : 'light')
+        }
+      })
+      observer.observe(root, { attributeFilter: ['class'] })
+
+      root.classList.toggle('dark', isDark)
+    </script>
   </head>
 
   <body>
@@ -30,7 +49,7 @@ const { title, description, date, updatedDate, heroImage } = Astro.props
       <article>
         <header class="pb-16 pt-24">
           <div class="space-y-4">
-            <h1 class="text-center text-4xl font-bold dark:text-gray-100">
+            <h1 class="text-center text-5xl font-bold dark:text-gray-100">
               {title}
             </h1>
             <dl>
@@ -38,7 +57,7 @@ const { title, description, date, updatedDate, heroImage } = Astro.props
                 <dl>
                   <div>
                     <div
-                      class="text-center text-sm font-medium leading-6 text-gray-500 dark:text-gray-400 md:text-base"
+                      class="text-center leading-6 text-gray-500 dark:text-gray-400"
                     >
                       {
                         date && (
