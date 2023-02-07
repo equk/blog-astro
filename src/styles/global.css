@@ -8,11 +8,11 @@
 
 /* imports */
 
-@import 'prism/prism-tomorrow.css';
+@import 'prism/prism-nord.css';
 @import 'prism/language-tabs.css';
 @import 'fonts.css';
 
-:not(pre) > code[class*='language-'],
+:not(pre)>code[class*='language-'],
 code,
 pre,
 pre[class*='language-'] {
@@ -108,7 +108,7 @@ li.task-list-item {
 
 /* inline code */
 
-:not(pre) > code {
+:not(pre)>code {
   background-color: #eef9ff !important;
   border-radius: 0.3125rem !important;
   color: #0282c9 !important;
@@ -117,7 +117,7 @@ li.task-list-item {
   font-weight: normal !important;
 }
 
-.dark :not(pre) > code {
+.dark :not(pre)>code {
   background-color: #011627 !important;
   color: #cc99cd !important;
 }
@@ -281,6 +281,7 @@ main .hero-image img {
 /* Wide Elements */
 
 @media only screen and (min-width: 960px) {
+
   blockquote,
   pre,
   article.message {
