@@ -10,6 +10,7 @@
 
 @import 'prism/prism-tomorrow.css';
 @import 'prism/language-tabs.css';
+@import 'fonts.css';
 
 :not(pre) > code[class*='language-'],
 code,
@@ -43,6 +44,7 @@ nav a {
     color-scheme: light;
     --theme-bg: #fafafa;
     --theme-link: #0282c9;
+    --theme-hover: #d14;
     --theme-text: #2c3e50;
     --theme-accent: #cc2a42;
     --theme-accent-2: #111;
@@ -54,10 +56,11 @@ nav a {
     color-scheme: dark;
     --theme-bg: #1d1f21;
     --theme-link: #d14;
+    --theme-hover: #0282c9;
     --theme-text: #efefef;
-    --theme-accent: #2bbc89;
+    --theme-accent: #0282c9;
     --theme-accent-2: #eee;
-    --theme-quote: #ccffb6;
+    --theme-quote: #0282c9;
     --theme-menu-bg: rgb(29 31 33 / 0.85);
   }
 
@@ -84,6 +87,16 @@ nav a {
   main .hero-image {
     @apply pb-8;
   }
+
+  a {
+    color: var(--theme-link);
+    transition: color 0.7s ease;
+  }
+
+  a:hover {
+    color: var(--theme-hover);
+    transition: color 0.7s ease;
+  }
 }
 
 /* Task Lists */
@@ -101,7 +114,6 @@ li.task-list-item {
   color: #0282c9 !important;
   font-family: monospace !important;
   padding: 0.2rem 0.4rem !important;
-  font-size: 0.9rem !important;
   font-weight: normal !important;
 }
 
