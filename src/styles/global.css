@@ -12,6 +12,8 @@ body {
   margin: auto;
   padding: 0;
   text-align: left;
+  font-size: 1.12rem;
+  line-height: 1.5rem;
 }
 
 nav a {
@@ -19,6 +21,7 @@ nav a {
 }
 
 /* TailwindCSS Styles */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -90,9 +93,9 @@ li.task-list-item {
   font-weight: normal !important;
 }
 
-.prose :where(:not(pre) > code):not(:where(.not-prose, .not-prose *))::before,
-.prose :where(:not(pre) > code):not(:where(.not-prose, .not-prose *))::after {
-  content: '';
+.dark :not(pre)>code {
+  background-color: #011627 !important;
+  color: #cc99cd !important
 }
 
 /* Typography Styles */
@@ -112,7 +115,7 @@ ul,
 ol,
 pre {
   margin: 1em 0;
-  line-height: 1.75;
+  line-height: 1.5rem;
 }
 
 blockquote {
