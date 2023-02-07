@@ -1,5 +1,6 @@
 ---
 import BaseHead from '~/components/BaseHead.astro'
+import BaseScript from '~/components/BaseScript.astro'
 import Header from '~/components/Header.astro'
 import Footer from '~/components/Footer.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '~/consts'
@@ -16,6 +17,7 @@ const posts = (await getCollection('blog')).sort(
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseScript />
   </head>
   <body>
     <Header />

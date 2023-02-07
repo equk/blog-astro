@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content'
 import BaseHead from '~/components/BaseHead.astro'
+import BaseScript from '~/components/BaseScript.astro'
 import Header from '~/components/Header.astro'
 import Footer from '~/components/Footer.astro'
 
@@ -12,35 +13,7 @@ const { title, description, date, updatedDate, heroImage } = Astro.props
 <html lang="en">
   <head>
     <BaseHead title={title} description={description} />
-
-    <script>
-      const root = document.documentElement
-
-      function getThemePref() {
-        if (
-          typeof localStorage !== 'undefined' &&
-          localStorage.getItem('theme')
-        ) {
-          return localStorage.getItem('theme')
-        }
-        return window.matchMedia('(prefers-color-scheme: dark)').matches
-          ? 'dark'
-          : 'light'
-      }
-
-      const isDark = getThemePref() === 'dark'
-
-      const observer = new MutationObserver(() => {
-        const rootIsDark = root.classList.contains('dark')
-
-        if (typeof localStorage !== 'undefined') {
-          localStorage.setItem('theme', rootIsDark ? 'dark' : 'light')
-        }
-      })
-      observer.observe(root, { attributeFilter: ['class'] })
-
-      root.classList.toggle('dark', isDark)
-    </script>
+    <BaseScript />
   </head>
 
   <body>
