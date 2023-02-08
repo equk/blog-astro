@@ -73,7 +73,7 @@ const posts = (await getCollection('blog')).sort(
         </div>
       </div>
     </section>
-    <main>
+    <main class="w-full max-w-4xl">
       <section>
         <ul class="list-none mb-6">
           {
@@ -85,7 +85,7 @@ const posts = (await getCollection('blog')).sort(
                     post.data.title
                   )}/`}
                 >
-                  <h3>{post.data.title}</h3>
+                  <h3 class="font-normal mb-2 mt-6">{post.data.title}</h3>
                 </a>
                 <div class="flex items-center space-x-2 uppercase">
                   <time datetime={post.data.date.toISOString()}>
