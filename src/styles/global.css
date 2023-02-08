@@ -10,6 +10,7 @@
 
 @import 'prism/prism-nord.css';
 @import 'prism/language-tabs.css';
+@import 'fa/fork-awesome.css';
 @import 'fonts.css';
 
 :not(pre)>code[class*='language-'],
