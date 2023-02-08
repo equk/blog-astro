@@ -100,6 +100,19 @@ nav a {
   }
 }
 
+/* Hero Image */
+
+main .hero-image img {
+  -webkit-box-shadow: 5px 5px 20px rgba(39, 44, 49, .6), 1px 3px 8px rgba(39, 44, 49, .3);
+  box-shadow: 5px 5px 20px rgba(39, 44, 49, .6), 1px 3px 8px rgba(39, 44, 49, .3);
+  max-height: 500px;
+}
+
+.dark main .hero-image img {
+  -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, .6), 1px 3px 8px rgba(0, 0, 0, .3);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .6), 1px 3px 8px rgba(0, 0, 0, .3);
+}
+
 /* Task Lists */
 
 li.task-list-item {
