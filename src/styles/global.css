@@ -100,6 +100,73 @@ nav a {
   }
 }
 
+/* Top Banner */
+
+.topbanner-body {
+  background-size: cover;
+  background-image: url("/media/images/keys_banner.jpg");
+  background-position: center bottom;
+  position: relative;
+  height: 400px;
+}
+
+.topbanner-body::before {
+  background: -webkit-linear-gradient(-45deg, #081123, #22185b);
+  background-color: #130d33;
+  background: linear, 135deg, #081123 0, #22185b 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+  left: 0;
+  opacity: .8;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  content: ""
+}
+
+.top-banner h2 {
+  color: #0282c9;
+}
+
+.topbanner-social {
+  font-size: 37px;
+  text-align: center;
+}
+
+.topbanner-social .fa {
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  padding: 8px;
+  text-align: center;
+}
+
+.topbanner-social a .fa-twitter {
+  background-color: #55acee;
+}
+
+.topbanner-social a .fa-facebook {
+  background-color: #3b5998;
+}
+
+.topbanner-social a .fa-google-plus {
+  background-color: #d34836;
+}
+
+.topbanner-social a .fa-tumblr {
+  background-color: #36465d;
+}
+
+.topbanner-social a .fa-github {
+  background-color: #333;
+}
+
+.topbanner-social a .fa-mastodon {
+  background-color: #563acc;
+}
+
 /* Hero Image */
 
 main .hero-image img {
