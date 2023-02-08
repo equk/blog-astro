@@ -9,7 +9,9 @@ import createSlug from '~/lib/createSlug'
 import slugDate from '~/lib/slugDate'
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) => a.data.date.valueOf() + b.data.date.valueOf()
+  (a, b) =>
+    Math.floor(new Date(b.data.date).getTime() / 1000) -
+    Math.floor(new Date(a.data.date).getTime() / 1000)
 )
 ---
 
