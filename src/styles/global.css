@@ -43,7 +43,7 @@ nav a {
 @layer base {
   :root {
     color-scheme: light;
-    --theme-bg: #fafafa;
+    --theme-bg: #fff;
     --theme-link: #0282c9;
     --theme-hover: #d14;
     --theme-text: #2c3e50;
