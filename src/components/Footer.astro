@@ -25,9 +25,13 @@ const MastodonLink = `https://${siteConfig.author.contacts.mastodon_url}`
           class="gap-x-2 text-center sm:gap-x-0"
         >
           <ul class="md:self-center md:text-base">
-            <li class="inline-block"><a href="/"> Home</a></li>
-            <li class="inline-block"><a href="/blog"> Blog</a></li>
-            <li class="inline-block"><a href="/about"> About</a></li>
+            {
+              siteConfig.menu.map((item) => (
+                <li class="inline-block">
+                  <a href={item.path}> {item.label}</a>
+                </li>
+              ))
+            }
           </ul>
         </nav>
       </div>

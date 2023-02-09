@@ -1,6 +1,6 @@
 ---
-import HeaderLink from '~/components/HeaderLink.astro'
 import ToggleDark from '~/components/ToggleDark.astro'
+import { siteConfig } from '~/config'
 ---
 
 <header class="mx-auto w-full flex-none duration-100 ease-in">
@@ -62,9 +62,13 @@ import ToggleDark from '~/components/ToggleDark.astro'
       <ul
         class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-base"
       >
-        <li><HeaderLink href="/">Home</HeaderLink></li>
-        <li><HeaderLink href="/blog">Blog</HeaderLink></li>
-        <li><HeaderLink href="/about">About</HeaderLink></li>
+        {
+          siteConfig.menu.map((item) => (
+            <li class="inline-block">
+              <a href={item.path}> {item.label}</a>
+            </li>
+          ))
+        }
       </ul><div class="flex items-center md:mb-0 md:self-center">
         <div class="hidden items-center md:flex">
           <ToggleDark />
