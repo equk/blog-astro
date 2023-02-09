@@ -129,12 +129,12 @@ nav a {
   color: #0282c9;
 }
 
-.topbanner-social {
+.social-blocks {
   font-size: 37px;
   text-align: center;
 }
 
-.topbanner-social .fa {
+.social-blocks .fa {
   background-color: rgba(0, 0, 0, 0.65);
   color: #fff;
   width: 50px;
@@ -143,27 +143,27 @@ nav a {
   text-align: center;
 }
 
-.topbanner-social a .fa-twitter {
+.social-blocks a .fa-twitter {
   background-color: #55acee;
 }
 
-.topbanner-social a .fa-facebook {
+.social-blocks a .fa-facebook {
   background-color: #3b5998;
 }
 
-.topbanner-social a .fa-google-plus {
+.social-blocks a .fa-google-plus {
   background-color: #d34836;
 }
 
-.topbanner-social a .fa-tumblr {
+.social-blocks a .fa-tumblr {
   background-color: #36465d;
 }
 
-.topbanner-social a .fa-github {
+.social-blocks a .fa-github {
   background-color: #333;
 }
 
-.topbanner-social a .fa-mastodon {
+.social-blocks a .fa-mastodon {
   background-color: #563acc;
 }
 
