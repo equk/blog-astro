@@ -3,6 +3,20 @@ export const siteConfig = {
   title: "equk's blog",
   subtitle: 'writings of a coder + sysadmin',
   description: 'blog of a developer & sysadmin',
+  menu: [
+    {
+      label: 'Home',
+      path: '/',
+    },
+    {
+      label: 'About',
+      path: '/about',
+    },
+    {
+      label: 'Projects',
+      path: '/projects',
+    },
+  ],
   author: {
     name: 'equilibriumuk',
     photo: '/users/equilibriumuk.jpg',
