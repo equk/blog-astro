@@ -17,6 +17,8 @@ const posts = (await getCollection('blog')).sort(
     Math.floor(new Date(b.data.date).getTime() / 1000) -
     Math.floor(new Date(a.data.date).getTime() / 1000)
 )
+
+const recent_posts = posts.slice(0, 3)
 ---
 
 <!DOCTYPE html>
@@ -75,9 +77,10 @@ const posts = (await getCollection('blog')).sort(
     </section>
     <main class="w-full max-w-4xl">
       <section>
+        <h2>Recent Posts:</h2>
         <ul class="list-none mb-6">
           {
-            posts.map((post) => (
+            recent_posts.map((post) => (
               <li>
                 <a
                   class="inline-block"
