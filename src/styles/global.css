@@ -113,10 +113,14 @@ footer {
 .pagination p {
   margin: 0;
   color: #e2e8f0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pagination a {
   color: var(--theme-text);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .dark .pagination p {

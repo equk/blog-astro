@@ -29,7 +29,10 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <BaseHead title={siteConfig.title} description={siteConfig.description} />
+    <BaseHead
+      title={`Posts Page ${page.currentPage} - ${siteConfig.title}`}
+      description={siteConfig.description}
+    />
     <BaseScript />
   </head>
   <body>
@@ -37,6 +40,11 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     <TopBanner />
     <main class="w-full max-w-4xl">
       <section>
+        <div
+          class="flex justify-center px-3 pt-6 pb-3 border-b-2 border-slate-200 dark:border-slate-700/40"
+        >
+          <h2 class="font-normal mb-2 mt-6">all posts</h2>
+        </div>
         <ul class="list-none mb-6">
           {
             page.data.map((post: typeof posts) => (
