@@ -57,8 +57,8 @@ nav a {
   :root.dark {
     color-scheme: dark;
     --theme-bg: #080d17;
-    --theme-link: #d14;
-    --theme-hover: #0282c9;
+    --theme-link: #0282c9;
+    --theme-hover: #d14;
     --theme-text: #efefef;
     --theme-accent: #0282c9;
     --theme-accent-2: #eee;
@@ -106,6 +106,21 @@ nav a {
 
 footer {
   background-color: var(--theme-footer-bg);
+}
+
+/* Pagination */
+
+.pagination p {
+  margin: 0;
+  color: #e2e8f0;
+}
+
+.pagination a {
+  color: var(--theme-text);
+}
+
+.dark .pagination p {
+  color: rgb(51 65 85);
 }
 
 /* Top Banner */
