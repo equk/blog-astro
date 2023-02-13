@@ -5,10 +5,12 @@
 - [x] OpenGraph & Twitter data
 - [x] Meta Tags
 - [x] Sitemap support
-- [x] RSS Feed support
 - [x] Markdown & MDX support
 - [x] TailwindCSS styles
 - [x] Prism code highlighting
+- [x] Dark mode (`prefers-color-scheme` & `localStorage`)
+- [x] Custom typography styles (override tailwindcss typography)
+- [x] Pagination of blog feed
 - [x] Blog post slug is generated from date & title
 - [x] Blog posts url format: `/YYYY/MM/DD/TITLE`
 - [x] Site config `src/config.ts`
@@ -27,8 +29,8 @@ Setting social media within author sets links in Header & Footer components
 
 ## TODO
 
-- [ ] Pagination of blog feed
 - [ ] OpenGraph image generation
+- [ ] Atom Feed
 
 ## Development Features
 
