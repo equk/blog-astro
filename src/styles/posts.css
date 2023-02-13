@@ -6,6 +6,24 @@
   https://github.com/equk/
  */
 
+/* Blockquote */
+
+main blockquote {
+    background-color: #eef9ff;
+    border-left: 5px solid #7fd1fe;
+    padding: 1.25em 1.5em;
+    margin: 0.5em 0;
+    font-style: normal;
+}
+
+main blockquote p {
+    margin: 0;
+}
+
+.dark main blockquote {
+    background-color: #334;
+}
+
 /* Github Button */
 
 a.github {
