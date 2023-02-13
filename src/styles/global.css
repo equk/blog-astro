@@ -12,6 +12,7 @@
 @import 'prism/language-tabs.css';
 @import 'fa/fork-awesome.css';
 @import 'fonts.css';
+@import 'posts.css';
 
 :not(pre)>code[class*='language-'],
 code,
@@ -412,4 +413,10 @@ main .hero-image img {
     max-width: none !important;
     width: 1016px;
   }
+}
+
+/* Button */
+
+.btn {
+  @apply py-2 px-4 rounded;
 }
