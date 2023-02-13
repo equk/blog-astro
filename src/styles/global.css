@@ -386,6 +386,15 @@ main .hero-image img {
   margin-right: auto;
 }
 
+@media only screen and (min-width: 960px) {
+
+  main .hero-image img {
+    object-fit: cover;
+    width: 1024px;
+    max-height: 400px;
+  }
+}
+
 /* Wide Elements */
 
 @media only screen and (min-width: 960px) {
