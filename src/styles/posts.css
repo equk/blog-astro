@@ -121,3 +121,9 @@ a.github:hover {
 .yt-red {
     color: #ff0000;
 }
+
+/* Invert Dark Images in Dark Mode */
+
+.dark img.dark-logo {
+    filter: invert(1);
+}
