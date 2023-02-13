@@ -28,28 +28,10 @@ module.exports = {
       },
       fontFamily: {
         // Add any custom fonts here
-        sans: ['Open Sans', ...fontFamily.sans],
+        sans: ['Inter', ...fontFamily.sans],
         serif: [...fontFamily.serif],
         mono: ['Fira Mono', ...fontFamily.mono],
       },
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            '--tw-prose-body': 'var(--theme-text)',
-            '--tw-prose-headings': 'var(--theme-text)',
-            '--tw-prose-links': 'var(--theme-text)',
-            '--tw-prose-bold': 'var(--theme-text)',
-            '--tw-prose-bullets': 'var(--theme-text)',
-            '--tw-prose-quotes': 'var(--theme-quote)',
-            '--tw-prose-code': 'var(--theme-text)',
-            '--tw-prose-hr': '0.5px dashed #666',
-            '--tw-prose-th-borders': '#666',
-            strong: {
-              fontWeight: '700',
-            },
-          },
-        },
-      }),
     },
   },
   plugins: [
