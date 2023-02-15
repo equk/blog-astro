@@ -6,10 +6,10 @@ date: 2023-02-02T15:31:23.725Z
 draft: true
 author: equilibriumuk
 tags:
-heroImage: '/media/images/unsplash_js_banner.webp'
+heroImage: '/placeholder-hero.jpg'
 ---
 
-This is an extension to [Generating Slug From Title In Astro](/2023/02/02/generating-slug-from-title-in-astro/)
+This is an extension to 📝 [Generating Slug From Title In Astro](/2023/02/02/generating-slug-from-title-in-astro/)
 
 The changes are similar to the previous article but will require an additional library to format the timestamp from frontmatter.
 
