@@ -109,6 +109,14 @@ footer {
   background-color: var(--theme-footer-bg);
 }
 
+footer .copyright img,
+footer .powered-by img {
+  height: 20px;
+  padding-left: .3125rem;
+  vertical-align: middle;
+  display: inline;
+}
+
 /* Pagination */
 
 .pagination p {
