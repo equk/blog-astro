@@ -1,16 +1,105 @@
 ---
 layout: '../layouts/PageMarkdown.astro'
-title: 'About'
+title: 'About Me'
 description: 'Lorem ipsum dolor sit amet'
-heroImage: '/media/images/unsplash_js_banner.webp'
+heroImage: ''
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+<div class="bg-gray-100 border border-gray-400 shadow rounded-lg p-10 dark:bg-gray-900 dark:border-gray-800">
+    <div class="flex flex-col gap-1 text-center items-center">
+        <img class="h-32 w-32 bg-white p-2 rounded-full shadow mb-4" src="/users/equilibriumuk.jpg" alt="">
+        <p class="text-2xl">equilibriumuk</p>
+        <div class="text-gray-500 dark:text-gray-400 flex justify-center items-center">
+        Web Developer & Site Reliability Engineer
+        </div>
+    </div>
+    <div class="flex justify-center items-center gap-2 my-3">
+        <p class="text-center"><span class="language-color js"></span> Javascript <span class="language-color py"></span> Python <span class="language-color ts"></span> Typescript <span class="language-color rust"></span> Rust <span class="language-color sh"></span> Bash <span class="language-color go"></span> Go <span class="language-color c"></span> C <span class="language-color ps"></span> Powershell</p>
+    </div>
+</div>
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+## Interests
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+<div class="grid grid-cols-3 gap-4">
+    <div>
+        <ul>
+        <li>Cybersecurity</li>
+        <li>Reverse Engineering</li>
+        <li>Electronics</li>
+        <li>Programming</li>
+        <li>Blockchain</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+        <li>Go</li>
+        <li>Nodejs</li>
+        <li>GraphQL</li>
+        <li>Vuejs</li>
+        <li>Typescript</li>
+        </ul>
+    </div>
+    <div>
+        <ul>
+        <li>Javascript</li>
+        <li>React</li>
+        <li>Cryptography</li>
+        <li>Rust</li>
+        </ul>
+    </div>
+</div>
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+I am always looking to learn new things & am normally breaking or experimenting with something new.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+## Linux
+
+I use Archlinux as my desktop OS with a tiling wm.<br />
+Screenshots & info on my setup can be found on my <a href="https://github.com/equk/dotfiles" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer">dotfiles repo</a> on github.
+
+<p class="text-center"><img class="inline" src="/media/logos/gentoo.svg" alt="gentoo" width="128px">
+<img class="inline" src="/media/logos/arch_128.png" alt="archlinux">
+<img class="inline" src="/media/logos/nixos.svg" alt="nixos" width="132px">
+<img class="inline" src="/media/logos/debian_128.png" alt="debian">
+<img class="inline" src="/media/logos/freebsd_128.png" alt="freebsd"></p>
+
+I started learning linux with Slackware then went on to Gentoo (stage 1 install) & then moved on to using Archlinux.
+
+Servers I work on use NixOS, Debian, Ubuntu, freebsd.<br />
+
+I also have a number of <a href="/projects">projects</a> based on Windows & Mac OS.<br />
+
+<article class="message is-dark">
+  <div class="message-header">
+    <p><i class="fa-lg fa fa-github"></i> Github</p>
+  </div>
+  <div class="message-body">
+    <p class="text-center">I work with a lot of opensource software & release many of my own projects opensource to help others.</p>
+    <p class="text-center"><span class="language-color js"></span> Javascript <span class="language-color py"></span> Python <span class="language-color ts"></span> Typescript <span class="language-color rust"></span> Rust <span class="language-color sh"></span> Bash <span class="language-color go"></span> Go <span class="language-color c"></span> C <span class="language-color ps"></span> Powershell</p>
+  </div>
+</article>
+
+---
+
+## About This Site
+
+This site is powered by Vite using Astro.
+
+<img class="inline" src="/media/logos/typescript.svg" alt="typescript-logo" width="80px">
+<img class="inline dark-logo" src="/media/logos/astro.svg" width="80px" alt="astro" class="dark-logo">
+<img class="inline" src="/media/logos/zod.svg" width="80px" alt="zod">
+<img class="inline" src="/media/logos/vite.svg" width="80px" alt="vite">
+
+## Features
+
+- [x] OpenGraph & Twitter data
+- [x] Meta Tags
+- [x] Sitemap support
+- [x] Markdown & MDX support
+- [x] TailwindCSS styles
+- [x] Prism code highlighting
+- [x] Dark mode (`prefers-color-scheme` & `localStorage`)
+- [x] Custom typography styles (override tailwindcss typography)
+- [x] Pagination of blog feed
+- [x] Blog post slug is generated from date & title
+- [x] Blog posts url format: `/YYYY/MM/DD/TITLE`
+- [x] Site config `src/config.ts`
