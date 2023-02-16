@@ -82,24 +82,23 @@ I also have a number of <a href="/projects">projects</a> based on Windows & Mac 
 
 ## About This Site
 
-This site is powered by Vite using Astro.
+This site is powered by Astro.
 
 <img class="inline" src="/media/logos/typescript.svg" alt="typescript-logo" width="80px">
-<img class="inline dark-logo" src="/media/logos/astro.svg" width="80px" alt="astro" class="dark-logo">
+<img class="inline dark-logo" src="/media/logos/astro.svg" width="80px" alt="astro">
 <img class="inline" src="/media/logos/zod.svg" width="80px" alt="zod">
 <img class="inline" src="/media/logos/vite.svg" width="80px" alt="vite">
+<img class="inline dark-logo" src="/media/logos/vercel.svg" width="80px" alt="vercel">
 
 ## Features
 
 - [x] OpenGraph & Twitter data
 - [x] Meta Tags
-- [x] Sitemap support
-- [x] Markdown & MDX support
+- [x] Sitemap
+- [x] Markdown & MDX
+- [x] Typescript Type Checking
+- [x] Syntax Highlighting with prismjs
 - [x] TailwindCSS styles
 - [x] Prism code highlighting
 - [x] Dark mode (`prefers-color-scheme` & `localStorage`)
-- [x] Custom typography styles (override tailwindcss typography)
-- [x] Pagination of blog feed
-- [x] Blog post slug is generated from date & title
-- [x] Blog posts url format: `/YYYY/MM/DD/TITLE`
-- [x] Site config `src/config.ts`
+- [x] Custom typography styles
