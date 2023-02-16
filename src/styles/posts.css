@@ -150,6 +150,7 @@ a.github:hover {
     @apply bg-black text-white font-bold rounded-t px-4 py-2;
     background-color: #1a252f;
     color: #fff;
+    font-family: Open Sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .message-header p {
