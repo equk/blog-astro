@@ -144,7 +144,7 @@ const posts = (await getCollection('blog')).sort(
 The default blog posts feed was at `/blog` but I wanted to move this to `/`.<br />
 I decided to seperate the feed to `/posts` & have the most recent posts on the front page.
 
-Pagination in Astro is really nice as there is a function which pretty much does all the work.
+Pagination in Astro is really easy as there is a function which pretty much does all the work.
 
 <i class="fa fa-link"></i> <a href="https://docs.astro.build/en/core-concepts/routing/#pagination" target="_blank" rel="noopener noreferrer">Routing 🚀 Astro Documentation</a>
 
@@ -204,7 +204,7 @@ Example atom implementation for blog entries.
 
 ## Screenshots
 
-This is what I have so far, the site looks very similar to the Gatsby blog.
+This is what I have so far, the site looks similar to the Gatsby blog.
 
 <p class="text-center">Astro</p>
 <img class="border mx-auto" src="/media/images/2023/astro-equk-ss-800.jpg" alt="astro-equk-ss-800">
@@ -216,7 +216,10 @@ A lot of time was spent on CSS & there were a few problems with tailwindcss.
 
 ## Conclusion
 
-Using Astro 2.0 changed my view, previously I only really used Astro for simplistic sites where content doesn't really change but with the addition of content collections & type schemas it really is nice to work with.<br />
+Using Astro 2.0 changed my view, previously I only really used Astro for simplistic sites where content doesn't really change but with the addition of content collections & type schemas it really is nice to work with.
+
+<i class="fa fa-link"></i> <a href="https://astro.build/blog/astro-2/" target="_blank" rel="noopener noreferrer">Astro Blog - Introducing Astro 2.0</a>
+
 I started porting the site over to Astro as a weekend project but ended up working on it in my spare time in the week as it was so interesting to work with.
 
 There are still features in Gatsby that Astro lacks (prefetch, image processing).
@@ -230,10 +233,12 @@ Things I like:
 The javascript payload is a lot smaller & there is no virtualDOM but there is no prefetch on links to speed up browsing, there are also no transitions & you have page reloads on navigation.<br />
 *There are libraries to help with this to make it more PWA like (eg: flamethrower).*
 
+I have not used any advanced features like islands architecture which will be a useful feature for adding things like dynamic comment components.
+
+<i class="fa fa-link"></i> <a href="https://docs.astro.build/en/concepts/islands/" target="_blank" rel="noopener noreferrer">Astro Islands 🚀 Astro Documentation</a>
+
 ## Notes
 
 Trying to recreate my blog using a basic template was much more interesting than just downloading a premade template as I feel like I had to learn different things about Astro I would have otherwise never touched.
 
 I first used `UnoCSS` which was so much faster than `tailwind` + `postcss` but I just could not get darkmode themed properly (the default darkmode did work using default colors).
-
-The Astro blog site is still not finished & I have a lot of ideas for new features like using a router for prefetching.
