@@ -13,7 +13,10 @@ const { title, date, heroImage } = Astro.props
 
 <html lang="en">
   <head>
-    <BaseHead title={title} description={siteConfig.description} />
+    <BaseHead
+      title={`${title} - ${siteConfig.title}`}
+      description={siteConfig.description}
+    />
     <BaseScript />
   </head>
 
