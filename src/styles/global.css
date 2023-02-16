@@ -103,6 +103,12 @@ nav a {
   }
 }
 
+/* Header */
+
+header nav a {
+  color: var(--theme-text);
+}
+
 /* Footer */
 
 footer {
@@ -115,6 +121,15 @@ footer .powered-by img {
   padding-left: .3125rem;
   vertical-align: middle;
   display: inline;
+}
+
+footer .footer-title p {
+  font-family: Open Sans, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  margin-top: 0;
+}
+
+footer nav a {
+  color: var(--theme-text);
 }
 
 /* Pagination */
