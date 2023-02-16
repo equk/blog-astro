@@ -15,7 +15,7 @@ const posts = (await getCollection('blog')).sort(
     Math.floor(new Date(a.data.date).getTime() / 1000)
 )
 
-const recent_posts = posts.slice(0, 3)
+const recent_posts = posts.slice(0, siteConfig.postsRecent)
 ---
 
 <!DOCTYPE html>

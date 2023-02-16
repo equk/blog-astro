@@ -4,6 +4,7 @@ export const siteConfig = {
   subtitle: 'writings of a coder + sysadmin',
   description: 'blog of a developer & sysadmin',
   postsPerPage: 5,
+  postsRecent: 4,
   menu: [
     {
       label: 'Home',
