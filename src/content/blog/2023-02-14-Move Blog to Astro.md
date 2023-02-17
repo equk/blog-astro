@@ -124,21 +124,6 @@ const rl = readline.createInterface({
 })
 ```
 
-## Feed Sorting
-
-The default template uses `valueOf()` which does not work so well.
-
-I ended up changing this to use `getTime` & `Math.floor`.
-
-```diff
-const posts = (await getCollection('blog')).sort(
--  (a, b) => a.data.date.valueOf() + b.data.date.valueOf()
-+  (a, b) =>
-+    Math.floor(new Date(b.data.date).getTime() / 1000) -
-+    Math.floor(new Date(a.data.date).getTime() / 1000)
-)
-```
-
 ## Pagination
 
 The default blog posts feed was at `/blog` but I wanted to move this to `/`.<br />
@@ -233,7 +218,8 @@ Things I like:
 The javascript payload is a lot smaller & there is no virtualDOM but there is no prefetch on links to speed up browsing, there are also no transitions & you have page reloads on navigation.<br />
 *There are libraries to help with this to make it more PWA like (eg: flamethrower).*
 
-I have not used any advanced features like islands architecture which will be a useful feature for adding things like dynamic comment components.
+I have not used any advanced features like islands architecture yet.<br />
+This will be a useful feature for adding things like dynamic comment components.
 
 <i class="fa fa-link"></i> <a href="https://docs.astro.build/en/concepts/islands/" target="_blank" rel="noopener noreferrer">Astro Islands 🚀 Astro Documentation</a>
 

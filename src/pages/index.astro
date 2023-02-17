@@ -10,9 +10,7 @@ import createSlug from '~/lib/createSlug'
 import slugDate from '~/lib/slugDate'
 
 const posts = (await getCollection('blog')).sort(
-  (a, b) =>
-    Math.floor(new Date(b.data.date).getTime() / 1000) -
-    Math.floor(new Date(a.data.date).getTime() / 1000)
+  (a, b) => b.data.date.getTime() - a.data.date.getTime()
 )
 
 const recent_posts = posts.slice(0, siteConfig.postsRecent)
