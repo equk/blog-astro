@@ -199,7 +199,7 @@ This is what I have so far, the site looks similar to the Gatsby blog.
 
 A lot of time was spent on CSS & there were a few problems with tailwindcss.
 
-## Conclusion
+## Thoughts So Far
 
 Using Astro 2.0 changed my view, previously I only really used Astro for simplistic sites where content doesn't really change but with the addition of content collections & type schemas it really is nice to work with.
 
@@ -207,21 +207,19 @@ Using Astro 2.0 changed my view, previously I only really used Astro for simplis
 
 I started porting the site over to Astro as a weekend project but ended up working on it in my spare time in the week as it was so interesting to work with.
 
-There are still features in Gatsby that Astro lacks (prefetch, image processing).
-
 Things I like:
 
 - [x] zod typechecking
 - [x] vite
 - [x] templating
-
-The javascript payload is a lot smaller & there is no virtualDOM but there is no prefetch on links to speed up browsing, there are also no transitions & you have page reloads on navigation.<br />
-*There are libraries to help with this to make it more PWA like (eg: flamethrower).*
+- [x] less clientside js
 
 I have not used any advanced features like islands architecture yet.<br />
 This will be a useful feature for adding things like dynamic comment components.
 
 <i class="fa fa-link"></i> <a href="https://docs.astro.build/en/concepts/islands/" target="_blank" rel="noopener noreferrer">Astro Islands 🚀 Astro Documentation</a>
+
+It still feels like I've only scratched the surface so far.
 
 ## Notes
 
