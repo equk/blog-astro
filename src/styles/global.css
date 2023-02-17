@@ -73,15 +73,11 @@ nav a {
   }
 
   html body {
-    @apply mx-auto flex h-full flex-col bg-bgColor font-normal text-textColor antialiased;
+    @apply bg-bgColor font-normal text-textColor antialiased;
   }
 
   main {
     @apply mx-auto max-w-6xl;
-  }
-
-  main header {
-    @apply mx-auto max-w-5xl;
   }
 
   main .post-content {
@@ -158,7 +154,7 @@ footer nav a {
   background-image: url("/media/images/keys_banner.jpg");
   background-position: center bottom;
   position: relative;
-  height: 400px;
+  height: 350px;
 }
 
 .topbanner-body::before {
