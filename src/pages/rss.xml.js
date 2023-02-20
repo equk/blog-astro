@@ -23,8 +23,9 @@ export async function get(context) {
         post.data.title
       )}/`,
       title: post.data.title,
-      description: post.data.description,
-      content: sanitizeHtml(markdown.render(post.body)),
+      description: sanitizeHtml(
+        markdown.render(post.body).split(' ').slice(0, 50).join(' ')
+      ),
       pubDate: new Date(post.data.date),
     })),
   })
