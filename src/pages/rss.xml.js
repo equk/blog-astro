@@ -13,7 +13,9 @@ const markdown = MarkdownIt({
 })
 
 export async function get(context) {
-  const posts = await getCollection('blog')
+  const posts = (await getCollection('blog')).sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime()
+  )
   return rss({
     title: siteConfig.title,
     description: siteConfig.description,
