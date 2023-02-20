@@ -24,7 +24,13 @@ export async function get(context) {
       )}/`,
       title: post.data.title,
       description: sanitizeHtml(
-        markdown.render(post.body).split(' ').slice(0, 50).join(' ')
+        markdown
+          .render(post.body)
+          .replace('src="/', `src="${siteConfig.url}/`)
+          .replace('href="/', `href="${siteConfig.url}/`)
+          .split(' ')
+          .slice(0, 50)
+          .join(' ')
       ),
       pubDate: new Date(post.data.date),
     })),
