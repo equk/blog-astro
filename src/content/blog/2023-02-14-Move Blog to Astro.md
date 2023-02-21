@@ -154,11 +154,6 @@ There are two problems with this:
 - [ ] Astro does not have atom support
 - [ ] MDX is not supported
 
-<blockquote>
-<p>When using glob imports with Markdown, we suggest using the compiledContent() helper to retrieve the rendered HTML for sanitization.</p>
-<p>Note: this feature is not supported for MDX files.</p>
-</blockquote>
-
 <i class="fa fa-link"></i> <a href="https://docs.astro.build/en/guides/rss/#including-full-post-content" target="_blank" rel="noopener noreferrer">RSS 🚀 Astro Documentation</a>
 
 ### RSS v Atom
@@ -167,25 +162,6 @@ Looking into syndication feed generation it's like everyone is using rss 2.0 ins
 Atom seems to fit better with syndication & seems to have more features.
 
 <i class="fa fa-link"></i> <a href="https://www.intertwingly.net/wiki/pie/Rss20AndAtom10Compared" target="_blank" rel="noopener noreferrer">Comparison of RSS and Atom Web Feed Formats</a>
-
-### External Syndication Feed Generation
-
-I am thinking of creating an external script to glob `.md` files (ignoring `.mdx`) to create an atom feed.
-
-Example atom implementation for blog entries.
-
-```js
-<entry>
-  <title type="html">${post.data.title}</title>
-  <link href="${canonicalURL}${post.data.path}" rel="alternate" type="text/html" title="${post.data.title}" />
-  <published>${yyyy_mm_dd(post.data.date)}T00:00:00+00:00</published>
-  <updated>${yyyy_mm_dd(post.data.date)}T00:00:00+00:00</updated>
-  <id>${canonicalURL}${post.data.path}</id>
-  <author><name>${siteConfig.author.name}</name></author>
-  <summary type="html"><![CDATA[${post.data.summary}]]></summary>
-  <content type="html" xml:base="${canonicalURL}${post.data.path}"><![CDATA[${post.data.content}]]></content>
-</entry>
-```
 
 ## Screenshots
 
@@ -226,3 +202,9 @@ It still feels like I've only scratched the surface so far.
 Trying to recreate my blog using a basic template was much more interesting than just downloading a premade template as I feel like I had to learn different things about Astro I would have otherwise never touched.
 
 I first used `UnoCSS` which was so much faster than `tailwind` + `postcss` but I just could not get darkmode themed properly (the default darkmode did work using default colors).
+
+## Source
+
+The source for this site is available on github.
+
+<a class="github" href="https://github.com/equk/blog-astro" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> blog-astro</a>
