@@ -1,0 +1,124 @@
+---
+title: "Default RSS Generation In Astro"
+date: 2023-02-20T13:34:05.580Z
+author: equilibriumuk
+heroImage: ""
+---
+
+<p class="text-center"><img class="inline dark-logo" src="/media/logos/astro.svg" alt="astro-logo" width="18%"></p>
+
+Using built in `@astrojs/rss` for generation seems simple but there are a few problems & a lot of missing features.
+
+## Problems
+
+I wanted to generate a feed using an excerpt of the blog post content.
+
+There are two problems with this:
+
+- [ ] Astro does not have atom support
+- [ ] MDX is not supported
+
+<i class="fa fa-link"></i> <a href="https://docs.astro.build/en/guides/rss/#including-full-post-content" target="_blank" rel="noopener noreferrer">RSS 🚀 Astro Documentation</a>
+
+I personally don't have any mdx content in posts so using `post.body` with `markdown-it` should be ok.
+
+- [ ] Missing fields in RSS
+
+There are a large number of RSS fields completely missing in `@astrojs/rss`.
+
+## Adding Content
+
+It is possible to input the content posts (mdx not supported) using `markdown-it` & `sanitize-html`.
+
+`rss.xml.js`
+
+```diff
+ import { getCollection } from 'astro:content'
+ import { siteConfig } from '~/config'
+ import createSlug from '~/lib/createSlug'
+ import slugDate from '~/lib/slugDate'
++import sanitizeHtml from 'sanitize-html'
++import MarkdownIt from 'markdown-it'
++
++const markdown = MarkdownIt({
++  html: true,
++  breaks: true,
++  linkify: true,
++})
+```
+
+```diff
+       description: post.data.description,
++      content: sanitizeHtml(markdown.render(post.body)),
+       pubDate: new Date(post.data.date),
+```
+
+## Adding Excerpt
+
+I wanted to add an excerpt of the content into the description field of the RSS entries. *(most tech blogs I subscribe to do this)*
+
+Implementing excerpt can be done a lot of different ways, a lot of implementations just use `x` characters.<br />
+I decided to do it using words *(items seperated by spaces)*
+
+```diff
+       title: post.data.title,
+-      description: post.data.description,
+-      content: sanitizeHtml(markdown.render(post.body)),
++      description: sanitizeHtml(
++        markdown.render(post.body).split(' ').slice(0, 50).join(' ')
++      ),
+```
+
+Kind of simple, take `post.body` & `split` it using spaces as seperator, then use `slice` to take the first `50` items, then `join` it all back again.
+
+There may be open `<p>` tags within the excerpt but any open tags will get closed with `sanitize-html` making the code safe.
+
+### Fixing Relative Paths
+
+Using `markdown-it` will output relative links & images.<br/>
+RSS feeds shouldn't have items with relative paths.
+
+To fix this use `replace()` on `href` & `src` objects starting with `/`.
+
+```diff
+       description: sanitizeHtml(
+-        markdown.render(post.body).split(' ').slice(0, 50).join(' ')
++        markdown
++          .render(post.body)
++          .replace('src="/', `src="${siteConfig.url}/`)
++          .replace('href="/', `href="${siteConfig.url}/`)
++          .split(' ')
++          .slice(0, 50)
++          .join(' ')
+```
+
+## Inspect Output
+
+The output looks really ugly but as the feed is valid feed readers should be able to read it ok.
+
+## Notes
+
+I am looking into generating feeds using an external script *(like you would in nextjs)*
+
+A few advantages to this over astrojs/rss:
+
+- [x] reference only `.md` files (exclude `.mdx`)
+- [x] clean formatting
+- [x] author fields
+- [x] updated date fields
+- [x] copyright fields
+- [x] atom support
+- [x] json support
+- [x] no dependence on astro
+
+<article class="message is-warning">
+  <div class="message-body text-center">
+    I would not recommend using @atrojs/rss at the moment due to missing features.
+  </div>
+</article>
+
+## Source
+
+The source for this site is available on github.
+
+<a class="github" href="https://github.com/equk/blog-astro" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> blog-astro</a> <a class="github" href="https://github.com/equk/blog-astro/blob/main/src/pages/rss.xml.js" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> rss.xml.js</a>
