@@ -22,51 +22,55 @@ There are two problems with this:
 
 I personally don't have any mdx content in posts so using `post.body` with `markdown-it` should be ok.
 
-- [ ] Missing fields in RSS
+- [ ] Majority of fields are missing
 
 There are a large number of RSS fields completely missing in `@astrojs/rss`.
 
+- [ ] Output has no CDATA for HTML
+
+The output does not use CDATA sections for HTML.
+
+> CDATA sections may occur anywhere character data may occur; they are used to escape blocks of text containing characters which would otherwise be recognized as markup.
+
+<i class="fa fa-link"></i> <a href="https://www.w3.org/TR/REC-xml/#sec-cdata-sect" target="_blank" rel="noopener noreferrer">W3C Extensible Markup Language (XML) 1.0 (Fifth Edition)</a>
+
 ## Adding Content
 
-It is possible to input the content posts (mdx not supported) using `markdown-it` & `sanitize-html`.
+It is possible to input the content of posts *(mdx not supported)* using `markdown-it` & `sanitize-html`.
 
 `rss.xml.js`
 
-```diff
- import { getCollection } from 'astro:content'
- import { siteConfig } from '~/config'
- import createSlug from '~/lib/createSlug'
- import slugDate from '~/lib/slugDate'
-+import sanitizeHtml from 'sanitize-html'
-+import MarkdownIt from 'markdown-it'
-+
-+const markdown = MarkdownIt({
-+  html: true,
-+  breaks: true,
-+  linkify: true,
-+})
+```js
+import { getCollection } from 'astro:content'
+import { siteConfig } from '~/config'
+import createSlug from '~/lib/createSlug'
+import slugDate from '~/lib/slugDate'
+import sanitizeHtml from 'sanitize-html'
+import MarkdownIt from 'markdown-it'
+
+const markdown = MarkdownIt({
+  html: true,
+  breaks: true,
+  linkify: true,
+})
 ```
 
-```diff
-       description: post.data.description,
-+      content: sanitizeHtml(markdown.render(post.body)),
-       pubDate: new Date(post.data.date),
+```js
+content: sanitizeHtml(markdown.render(post.body)),
 ```
 
 ## Adding Excerpt
 
 I wanted to add an excerpt of the content into the description field of the RSS entries. *(most tech blogs I subscribe to do this)*
 
-Implementing excerpt can be done a lot of different ways, a lot of implementations just use `x` characters.<br />
+Implementing excerpt can be done in different ways, a lot of implementations just use `x` characters.<br />
 I decided to do it using words *(items seperated by spaces)*
 
-```diff
+```js
        title: post.data.title,
--      description: post.data.description,
--      content: sanitizeHtml(markdown.render(post.body)),
-+      description: sanitizeHtml(
-+        markdown.render(post.body).split(' ').slice(0, 50).join(' ')
-+      ),
+       description: sanitizeHtml(
+         markdown.render(post.body).split(' ').slice(0, 50).join(' ')
+       ),
 ```
 
 Kind of simple, take `post.body` & `split` it using spaces as seperator, then use `slice` to take the first `50` items, then `join` it all back again.
@@ -80,21 +84,17 @@ RSS feeds shouldn't have items with relative paths.
 
 To fix this use `replace()` on `href` & `src` objects starting with `/`.
 
-```diff
-       description: sanitizeHtml(
--        markdown.render(post.body).split(' ').slice(0, 50).join(' ')
-+        markdown
-+          .render(post.body)
-+          .replace('src="/', `src="${siteConfig.url}/`)
-+          .replace('href="/', `href="${siteConfig.url}/`)
-+          .split(' ')
-+          .slice(0, 50)
-+          .join(' ')
+```js
+      description: sanitizeHtml(
+        markdown
+          .render(post.body)
+          .replace('src="/', `src="${siteConfig.url}/`)
+          .replace('href="/', `href="${siteConfig.url}/`)
+          .split(' ')
+          .slice(0, 50)
+          .join(' ')
+      ),
 ```
-
-## Inspect Output
-
-The output looks really ugly but as the feed is valid feed readers should be able to read it ok.
 
 ## Notes
 
