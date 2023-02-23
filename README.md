@@ -14,6 +14,8 @@
 - [x] Blog post slug is generated from date & title
 - [x] Blog posts url format: `/YYYY/MM/DD/TITLE`
 - [x] Site config `src/config.ts`
+- [x] Syndication Feed Generation (`atom`)
+- [x] OpenGraph Image
 
 ### Site Config
 
@@ -22,15 +24,12 @@
 - [x] Menu Items
 - [x] Site Author
 - [x] Author Social Media
+- [x] Posts Per Page
+- [x] Recent Posts
 
 Setting menu items creates links in Header & Footer components
 
 Setting social media within author sets links in Header & Footer components
-
-## TODO
-
-- [ ] OpenGraph image generation
-- [ ] Atom Feed
 
 ## Development Features
 
@@ -44,4 +43,3 @@ Based on `Astro Starter Kit: Blog` template
 ```
 npm create astro@latest -- --template blog
 ```
-
