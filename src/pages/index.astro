@@ -28,7 +28,7 @@ const recent_posts = posts.slice(0, siteConfig.postsRecent)
     <main class="w-full max-w-4xl">
       <section>
         <h2>Recent Posts:</h2>
-        <ul class="list-none mb-6">
+        <ul class="mb-6 list-none">
           {
             recent_posts.map((post) => (
               <li>
@@ -38,7 +38,7 @@ const recent_posts = posts.slice(0, siteConfig.postsRecent)
                     post.data.title
                   )}/`}
                 >
-                  <h3 class="font-normal mb-2 mt-6">{post.data.title}</h3>
+                  <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
                 </a>
                 <div class="flex items-center space-x-2 uppercase">
                   <time datetime={post.data.date.toISOString()}>

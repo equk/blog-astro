@@ -39,11 +39,11 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     <main class="w-full max-w-4xl">
       <section>
         <div
-          class="flex justify-center px-3 pt-6 pb-3 border-b-2 border-slate-200 dark:border-slate-700/40"
+          class="flex justify-center border-b-2 border-slate-200 px-3 pt-6 pb-3 dark:border-slate-700/40"
         >
-          <h2 class="font-normal mb-2 mt-6">all posts</h2>
+          <h2 class="mb-2 mt-6 font-normal">all posts</h2>
         </div>
-        <ul class="list-none mb-6">
+        <ul class="mb-6 list-none">
           {
             page.data.map((post: typeof posts) => (
               <li>
@@ -53,7 +53,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
                     post.data.title
                   )}/`}
                 >
-                  <h3 class="font-normal mb-2 mt-6">{post.data.title}</h3>
+                  <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
                 </a>
                 <div class="flex items-center space-x-2 uppercase">
                   <time datetime={post.data.date.toISOString()}>
@@ -69,7 +69,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
           }
         </ul>
         <div
-          class="pagination flex justify-center px-3 py-2 border-t-2 border-slate-200 dark:border-slate-700/40"
+          class="pagination flex justify-center border-t-2 border-slate-200 px-3 py-2 dark:border-slate-700/40"
         >
           {
             (page.url.prev || page.url.next) && (
