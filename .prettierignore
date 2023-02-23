@@ -8,3 +8,9 @@
 pnpm-lock.yaml
 # built site
 dist
+# markdown files
+*.md
+# css files
+*.css
+# package.json
+package.json
