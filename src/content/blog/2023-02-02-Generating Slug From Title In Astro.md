@@ -1,11 +1,7 @@
 ---
-slug: ''
 title: 'Generating Slug From Title In Astro'
-description: ''
 date: 2023-02-02T15:03:12.984Z
-draft: true
 author: equilibriumuk
-tags:
 heroImage: '/placeholder-hero.jpg'
 ---
 

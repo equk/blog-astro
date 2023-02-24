@@ -1,11 +1,7 @@
 ---
-slug: ''
 title: 'Generating Slug Using Published Date In Astro'
-description: ''
 date: 2023-02-02T15:31:23.725Z
-draft: true
 author: equilibriumuk
-tags:
 heroImage: '/placeholder-hero.jpg'
 ---
 
