@@ -111,14 +111,20 @@ A few advantages to this over astrojs/rss:
 - [x] json support
 - [x] no dependence on astro
 
-<article class="message is-warning">
-  <div class="message-body text-center">
-    I would not recommend using @atrojs/rss at the moment due to missing features.
+---
+
+Update February 22, 2023
+
+<article class="message is-info">
+  <div class="message-body">
+    <i class="fa fa-info-circle"></i> I am now using a script to generate atom feeds & do not recommend using <code>@astrojs/rss</code>
   </div>
 </article>
+
+📝 [Atom Feed Generation Script](/2023/02/22/atom-feed-generation-script/)
 
 ## Source
 
 The source for this site is available on github.
 
-<a class="github" href="https://github.com/equk/blog-astro" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> blog-astro</a> <a class="github" href="https://github.com/equk/blog-astro/blob/main/src/pages/rss.xml.js" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> rss.xml.js</a>
+<a class="github" href="https://github.com/equk/blog-astro" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> blog-astro</a>
