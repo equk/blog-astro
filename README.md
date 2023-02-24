@@ -1,5 +1,14 @@
 # Astro Blog :: equk.co.uk
 
+<br />
+
+<p align="center">
+<img src="./public/media/logos/typescript.svg" alt="typescript-logo" width="80px">
+<img src="./public/media/logos/astro.svg" width="80px" alt="astro">
+<img src="./public/media/logos/zod.svg" width="80px" alt="zod">
+<img src="./public/media/logos/vite.svg" width="80px" alt="vite">
+</p>
+
 ## Features
 
 - [x] OpenGraph & Twitter data
