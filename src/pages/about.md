@@ -94,11 +94,10 @@ This site is powered by Astro.
 
 - [x] OpenGraph & Twitter data
 - [x] Meta Tags
-- [x] Sitemap
-- [x] Markdown & MDX
-- [x] Typescript Type Checking
-- [x] Syntax Highlighting with prismjs
+- [x] Sitemap support
+- [x] Markdown & MDX support
 - [x] TailwindCSS styles
-- [x] Prism code highlighting
+- [x] Prism code highlighting (using `nordtheme`)
 - [x] Dark mode (`prefers-color-scheme` & `localStorage`)
-- [x] Custom typography styles
+- [x] Syndication Feed Generation (`atom`)
+- [x] OpenGraph Image
