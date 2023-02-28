@@ -7,26 +7,25 @@ heroImage: ""
 
 <p class="text-center"><img class="inline dark-logo" src="/media/logos/astro.svg" alt="astro-logo" width="18%"></p>
 
-Using built in `@astrojs/rss` for generation seems simple but there are a few problems & a lot of missing features.
+Using built in `@astrojs/rss` for generation seems simple but there are a few problems & missing features.
 
 ## Problems
 
 I wanted to generate a feed using an excerpt of the blog post content.
 
-There are two problems with this:
+There is a problem with this
 
-- [ ] Astro does not have atom support
-- [ ] MDX is not supported
+### MDX is not supported
 
 <i class="fa fa-link"></i> <a href="https://docs.astro.build/en/guides/rss/#including-full-post-content" target="_blank" rel="noopener noreferrer">RSS 🚀 Astro Documentation</a>
 
 I personally don't have any mdx content in posts so using `post.body` with `markdown-it` should be ok.
 
-- [ ] Majority of fields are missing
+### Majority of fields are missing
 
 There are a large number of RSS fields completely missing in `@astrojs/rss`.
 
-- [ ] Output has no CDATA for HTML
+### Output has no CDATA for HTML
 
 The output does not use CDATA sections for HTML.
 
@@ -100,16 +99,14 @@ To fix this use `replace()` on `href` & `src` objects starting with `/`.
 
 I am looking into generating feeds using an external script *(like you would in nextjs)*
 
-A few advantages to this over astrojs/rss:
+A few advantages to using a script over astrojs/rss:
 
-- [x] reference only `.md` files (exclude `.mdx`)
-- [x] clean formatting
-- [x] author fields
-- [x] updated date fields
-- [x] copyright fields
-- [x] atom support
-- [x] json support
-- [x] no dependence on astro
+- [x] Atom support
+- [x] Reference only `.md` files
+- [x] Better formatting including `CDATA`
+- [x] Extra fields (eg: `author`, `copyright`)
+- [x] Feed Validation
+- [x] No dependence on Astro
 
 ---
 

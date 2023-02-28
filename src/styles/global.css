@@ -396,15 +396,6 @@ main ul {
   list-style-type: disc;
 }
 
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6 {
-  text-transform: capitalize;
-}
-
 /* Hero Image */
 
 main .hero-image img {

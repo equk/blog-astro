@@ -36,7 +36,7 @@ export default function (title: string) {
 }
 ```
 
-## slug generation
+## Slug Generation
 
 Instead of referencing `post.slug` we need to call `createSlug` referencing `post.data.title`.
 
@@ -53,7 +53,7 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<"blog">;
 ```
 
-## blog post links
+## Blog Post Links
 
 Similar to above reference `post.data.title` using `createSlug` instead of `post.slug`
 

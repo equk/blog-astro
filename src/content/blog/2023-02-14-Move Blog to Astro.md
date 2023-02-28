@@ -14,12 +14,11 @@ I have been thinking of redesigning my blog for a while & maybe even moving away
 
 ***Is it possible to completely replace Gatsby with Astro & keep the same features?***
 
-To try to answer this why not move this blog to Astro ?<br />
-*(lets also use tailwind instead of bulma)*
+To try to answer this why not move my Gatsby blog to Astro ?<br />
 
 ## Init Astro Blog
 
-I looked at some templates but wanted to understand more how Astro worked so used the basic default blog template.
+I looked at some templates but wanted to understand more how Astro worked so used the basic blog template.
 
 ```sh
 pnpm create astro@latest -- --template blog
@@ -27,7 +26,7 @@ pnpm create astro@latest -- --template blog
 
 I first tried in Astro 1.9.0 & didn't really like the structure of posts etc.
 
-The project sort of got left for a while until Astro 2.0 came out with collections & type safety.<br />
+The project got left for a while until Astro 2.0 came out with collections & type safety.<br />
 Suddenly Astro looked like it would be a lot easier to structure & use for blogs.
 
 ## Linting Code
@@ -156,9 +155,11 @@ There are two problems with this:
 
 <i class="fa fa-link"></i> <a href="https://docs.astro.build/en/guides/rss/#including-full-post-content" target="_blank" rel="noopener noreferrer">RSS 🚀 Astro Documentation</a>
 
+The default plugin `@astrojs/rss` also only has a few basic fields.
+
 ### RSS v Atom
 
-Looking into syndication feed generation it's like everyone is using rss 2.0 instead of atom.<br />
+Looking into syndication feed generation it seems like rss 2.0 is used more than atom.<br />
 Atom seems to fit better with syndication & seems to have more features.
 
 <i class="fa fa-link"></i> <a href="https://www.intertwingly.net/wiki/pie/Rss20AndAtom10Compared" target="_blank" rel="noopener noreferrer">Comparison of RSS and Atom Web Feed Formats</a>
@@ -177,7 +178,7 @@ A lot of time was spent on CSS & there were a few problems with tailwindcss.
 
 ## Thoughts So Far
 
-Using Astro 2.0 changed my view, previously I only really used Astro for simplistic sites where content doesn't really change but with the addition of content collections & type schemas it really is nice to work with.
+Using Astro 2.0 changed my view, previously I only really used Astro for simplistic sites where content doesn't really change but with the addition of content collections & automatic generation of types it really is nice to work with.
 
 <i class="fa fa-link"></i> <a href="https://astro.build/blog/astro-2/" target="_blank" rel="noopener noreferrer">Astro Blog - Introducing Astro 2.0</a>
 
@@ -199,7 +200,7 @@ It still feels like I've only scratched the surface so far.
 
 ## Notes
 
-Trying to recreate my blog using a basic template was much more interesting than just downloading a premade template as I feel like I had to learn different things about Astro I would have otherwise never touched.
+Trying to recreate my blog using a basic template was much more interesting than downloading a premade template as I feel like I had to learn different things about Astro I would have otherwise never touched.
 
 I first used `UnoCSS` which was so much faster than `tailwind` + `postcss` but I just could not get darkmode themed properly (the default darkmode did work using default colors).
 
