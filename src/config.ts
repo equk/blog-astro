@@ -3,8 +3,8 @@ export const siteConfig = {
   title: "equk's blog",
   subtitle: 'writings of a coder + sysadmin',
   description: 'blog of a developer & sysadmin',
-  postsPerPage: 5,
-  postsRecent: 4,
+  postsPerPage: 7,
+  postsRecent: 5,
   menu: [
     {
       label: 'Home',
