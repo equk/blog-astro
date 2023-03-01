@@ -1,3 +1,14 @@
+/*!
+ * generate-feed.ts v1.0.0
+ *
+ * https://github.com/equk/
+ *
+ * Copyright (c) 2023 B.Walden. All rights reserved.
+ *
+ * Licensed under the MIT License
+ *
+ * (LICENSE file should be included with script)
+ */
 import type { FeedOptions, Item } from 'feed'
 import { Feed } from 'feed'
 import MarkdownIt from 'markdown-it'
