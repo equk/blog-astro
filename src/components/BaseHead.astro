@@ -1,9 +1,10 @@
 ---
 import '~/styles/global.css'
+import { siteConfig } from '~/config'
 
 export interface Props {
   title: string
-  description: string
+  description?: string
   image?: string
 }
 
@@ -11,7 +12,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
 const {
   title,
-  description,
+  description = siteConfig.description,
   socialImage = '/media/images/social.png',
   atomFeed = '/atom.xml',
 } = Astro.props

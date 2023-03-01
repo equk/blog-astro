@@ -13,10 +13,7 @@ const { frontmatter } = Astro.props
 
 <html lang="en">
   <head>
-    <BaseHead
-      title={`${frontmatter.title} - ${siteConfig.title}`}
-      description={siteConfig.description}
-    />
+    <BaseHead title={`${frontmatter.title} - ${siteConfig.title}`} />
     <BaseScript />
   </head>
 

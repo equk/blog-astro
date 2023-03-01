@@ -28,8 +28,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 <html lang="en">
   <head>
     <BaseHead
-      title={`Posts Page ${page.currentPage} - ${siteConfig.title}`}
-      description={siteConfig.description}
+      title={`All Posts - Page ${page.currentPage} - ${siteConfig.title}`}
     />
     <BaseScript />
   </head>
@@ -41,7 +40,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
         <div
           class="flex justify-center border-b-2 border-slate-200 px-3 pt-6 pb-3 dark:border-slate-700/40"
         >
-          <h2 class="mb-2 mt-6 font-normal">all posts</h2>
+          <h2 class="mb-2 mt-6 font-normal">All Posts</h2>
         </div>
         <ul class="mb-6 list-none">
           {
