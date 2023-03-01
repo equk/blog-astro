@@ -35,6 +35,7 @@ const options: FeedOptions = {
     link: siteConfig.url,
   },
   favicon: siteConfig.url + '/favicon.svg',
+  image: siteConfig.url + '/media/images/social.png',
   feedLinks: {
     atom: siteConfig.url + '/atom.xml',
   },
