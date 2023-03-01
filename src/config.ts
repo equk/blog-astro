@@ -1,8 +1,8 @@
 export const siteConfig = {
   url: 'https://equk.co.uk',
   title: "equk's blog",
-  subtitle: 'writings of a coder + sysadmin',
-  description: 'blog of a developer & sysadmin',
+  description:
+    'Tech Blog of a Developer & Linux Systems Adminstrator. Subjects include programming, reverse engineering, computer security & server administration',
   postsPerPage: 7,
   postsRecent: 5,
   menu: [
