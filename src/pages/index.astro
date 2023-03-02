@@ -28,7 +28,7 @@ const recentPosts = posts.slice(0, siteConfig.postsRecent)
     <main class="w-full max-w-4xl">
       <section>
         <h2 class="mt-7 mb-0">Recent Posts</h2>
-        <ul class="m-0 list-none">
+        <ul class="p-0 m-0 mb-6 list-none">
           {
             recentPosts.map((post) => (
               <li>
@@ -53,11 +53,26 @@ const recentPosts = posts.slice(0, siteConfig.postsRecent)
             ))
           }
         </ul>
-        <div class="flex justify-center px-3 py-6">
-          <nav class="flex items-center gap-x-8">
+        <div
+          class="pagination flex justify-center border-t border-slate-200 px-3 py-2 dark:border-slate-700/40"
+        >
+          <nav class="flex items-center gap-x-8 text-xl">
             <a href="/posts">
-              <h4 class="m-0 font-normal">View All Posts</h4>
-            </a>
+              All Posts <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="inline"
+                ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                  points="12 5 19 12 12 19"></polyline></svg
+              ></a
+            >
           </nav>
         </div>
       </section>
