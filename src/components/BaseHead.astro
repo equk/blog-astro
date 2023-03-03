@@ -32,6 +32,13 @@ const {
   type="application/atom+xml"
   href={new URL(atomFeed, Astro.url)}
 />
+<link
+  rel="preload"
+  fetchpriority="high"
+  as="image"
+  href="/media/images/keys_banner.webp"
+  type="image/webp"
+/>
 <title>{title}</title>
 <meta name="title" content={title} />
 {description && <meta name="description" content={description} />}
@@ -45,4 +52,3 @@ const {
 <meta property="twitter:title" content={title} />
 {description && <meta property="twitter:description" content={description} />}
 <meta property="twitter:image" content={new URL(socialImage, Astro.url)} />
-<meta name="robots" content="noindex, nofollow" />
