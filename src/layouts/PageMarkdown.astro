@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { Picture } from '@astrojs/image/components'
 import BaseHead from '~/components/BaseHead.astro'
 import BaseScript from '~/components/BaseScript.astro'
 import Header from '~/components/Header.astro'
@@ -31,7 +32,13 @@ const { frontmatter } = Astro.props
         {
           frontmatter.heroImage && (
             <div class="hero-image">
-              <img src={frontmatter.heroImage} alt="" />
+              <Picture
+                src={frontmatter.heroImage}
+                widths={[800, 1200]}
+                sizes="(max-width: 1200px) 100vw, 1200px"
+                alt=""
+                aspectRatio={1200 / 500}
+              />
             </div>
           )
         }
