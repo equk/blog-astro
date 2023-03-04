@@ -77,7 +77,7 @@ nav a {
   }
 
   main {
-    @apply mx-auto max-w-6xl;
+    @apply mx-auto;
   }
 
   main .post-content {
@@ -255,6 +255,11 @@ main .hero-image img {
   box-shadow: 5px 5px 20px rgba(0, 0, 0, .6), 1px 3px 8px rgba(0, 0, 0, .3);
 }
 
+main .hero-image img {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Task Lists */
 
 li.task-list-item {
@@ -417,22 +422,6 @@ summary {
 
 main ul {
   list-style-type: disc;
-}
-
-/* Hero Image */
-
-main .hero-image img {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media only screen and (min-width: 960px) {
-
-  main .hero-image img {
-    object-fit: cover;
-    width: 1024px;
-    max-height: 400px;
-  }
 }
 
 /* Wide Elements */
