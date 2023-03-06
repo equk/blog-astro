@@ -2,8 +2,10 @@
 title: 'Generating Slug From Title In Astro'
 date: 2023-02-02T15:03:12.984Z
 author: equilibriumuk
-heroImage: '/placeholder-hero.jpg'
+heroImage: ''
 ---
+
+<p class="text-center"><img class="inline dark-logo" src="/media/logos/astro.svg" alt="astro-logo" width="18%"></p>
 
 By default astro generates slug using filenames.
 
