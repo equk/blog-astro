@@ -2,8 +2,10 @@
 title: 'Generating Slug Using Published Date In Astro'
 date: 2023-02-02T15:31:23.725Z
 author: equilibriumuk
-heroImage: '/placeholder-hero.jpg'
+heroImage: ''
 ---
+
+<p class="text-center"><img class="inline dark-logo" src="/media/logos/astro.svg" alt="astro-logo" width="18%"></p>
 
 This is an extension to 📝 [Generating Slug From Title In Astro](/2023/02/02/generating-slug-from-title-in-astro/)
 
