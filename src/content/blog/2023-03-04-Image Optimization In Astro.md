@@ -75,7 +75,7 @@ import { Picture } from '@astrojs/image/components'
             <div class="hero-image">
               <Picture
                 src={heroImage}
-                widths={[800, 1200]}
+                widths={[400, 800, 1200]}
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 alt=""
                 aspectRatio={1200 / 500}
@@ -85,8 +85,8 @@ import { Picture } from '@astrojs/image/components'
         }
 ```
 
-This configuration creates 2 image sizes (`800px`, `1200px`) with 2 formats (`avif`, `webp`).<br/>
-It also has aspect ratio set so images are resized & cropped to `1200x500px`.
+This configuration creates 3 image sizes (`400px`, `800px`, `1200px`) with 2 formats (`avif`, `webp`).<br/>
+It also has aspect ratio set so images are resized & cropped.
 
 ## Browser Based Lazy Loading
 
