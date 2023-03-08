@@ -86,18 +86,17 @@ This site is powered by Astro.
 
 <img class="inline" src="/media/logos/typescript.svg" alt="typescript-logo" width="80px">
 <img class="inline dark-logo" src="/media/logos/astro.svg" width="80px" alt="astro">
-<img class="inline" src="/media/logos/zod.svg" width="80px" alt="zod">
 <img class="inline" src="/media/logos/vite.svg" width="80px" alt="vite">
 <img class="inline dark-logo" src="/media/logos/vercel.svg" width="80px" alt="vercel">
 
 ## Features
 
-- [x] OpenGraph & Twitter data
-- [x] Meta Tags
-- [x] Sitemap support
-- [x] Markdown & MDX support
-- [x] TailwindCSS styles
+- [x] OpenGraph & Twitter Meta Tags
+- [x] Sitemap Generation
+- [x] Markdown & MDX
+- [x] Tailwind & PostCSS
 - [x] Prism code highlighting (using `nordtheme`)
 - [x] Dark mode (`prefers-color-scheme` & `localStorage`)
 - [x] Syndication Feed Generation (`atom`)
 - [x] OpenGraph Image
+- [x] Hero Image Optimization
