@@ -11,12 +11,11 @@
 
 ## Features
 
-- [x] OpenGraph & Twitter data
-- [x] Meta Tags
-- [x] Sitemap support
-- [x] Markdown & MDX support
-- [x] TailwindCSS styles
-- [x] Prism code highlighting
+- [x] OpenGraph & Twitter Meta Tags
+- [x] Sitemap Generation
+- [x] Markdown & MDX
+- [x] Tailwind & PostCSS
+- [x] Prism code highlighting (using `nordtheme`)
 - [x] Dark mode (`prefers-color-scheme` & `localStorage`)
 - [x] Custom typography styles (override tailwindcss typography)
 - [x] Pagination of blog feed
@@ -25,6 +24,7 @@
 - [x] Site config `src/config.ts`
 - [x] Syndication Feed Generation (`atom`)
 - [x] OpenGraph Image
+- [x] Hero Image Optimization
 
 ### Site Config
 
