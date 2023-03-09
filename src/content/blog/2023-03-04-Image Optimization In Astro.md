@@ -3,6 +3,8 @@ title: "Image Optimization In Astro"
 date: 2023-03-04T12:11:06.910Z
 author: equilibriumuk
 heroImage: "/media/images/hero/nasa-space-sil.jpg"
+imgAuthor: "NASA"
+imgAuthorURL: "https://unsplash.com/@nasa"
 ---
 
 Adding image optimization to Astro using `@astrojs/image`
