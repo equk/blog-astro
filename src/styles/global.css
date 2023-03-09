@@ -244,6 +244,24 @@ footer nav a {
 
 /* Hero Image */
 
+main .hero-w {
+  max-width: 1200px;
+  max-height: 500px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  color: #e5e7eb;
+}
+
+main .hero-w .hero-link {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background-color: rgba(0, 0, 0, .7);
+  border-radius: 0.3125rem;
+  padding: 0.2rem 0.4rem;
+}
+
 main .hero-image img {
   -webkit-box-shadow: 5px 5px 20px rgba(39, 44, 49, .6), 1px 3px 8px rgba(39, 44, 49, .3);
   box-shadow: 5px 5px 20px rgba(39, 44, 49, .6), 1px 3px 8px rgba(39, 44, 49, .3);
