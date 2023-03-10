@@ -52,29 +52,27 @@ const recentPosts = posts.slice(0, siteConfig.postsRecent)
               </li>
             ))
           }
-        </ul>
-        <div
-          class="pagination flex justify-center border-t border-slate-200 px-3 py-2 dark:border-slate-700/40"
-        >
-          <nav class="flex items-center gap-x-8 text-xl">
+          <li>
             <a href="/posts">
-              All Posts <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="inline"
-                ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
-                  points="12 5 19 12 12 19"></polyline></svg
-              ></a
-            >
-          </nav>
-        </div>
+              <h3 class="mb-2 mt-6 font-normal">
+                All Posts <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="inline"
+                  ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                    points="12 5 19 12 12 19"></polyline></svg
+                >
+              </h3>
+            </a>
+          </li>
+        </ul>
       </section>
     </main>
     <Footer />
