@@ -172,6 +172,20 @@ footer nav a {
 
 /* Top Banner */
 
+.top-banner {
+  position: relative;
+}
+
+.top-banner:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, hsla(339, 100%, 55%, 1) 0%, hsla(128, 100%, 77%, 1) 50%, hsla(197, 100%, 64%, 1) 100%);
+}
+
 .topbanner-body {
   background-size: cover;
   background-image: url("/media/images/keys_banner.webp");
