@@ -66,3 +66,9 @@ Similar to above reference `post.data.title` using `createSlug` instead of `post
 +    {post.data.title}
 +  </a>
 ```
+
+## Source
+
+The source for this site is available on github.
+
+<a class="github" href="https://github.com/equk/blog-astro" aria-label="View on GitHub" target="_blank" rel="noopener noreferrer"><i class="fa fa-github"></i> blog-astro</a>
