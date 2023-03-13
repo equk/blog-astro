@@ -25,55 +25,61 @@ const recentPosts = posts.slice(0, siteConfig.postsRecent)
   <body>
     <Header />
     <TopBanner />
-    <main class="w-full max-w-4xl">
-      <section>
-        <h2 class="mt-7 mb-0">Recent Posts</h2>
-        <ul class="p-0 m-0 mb-6 list-none">
-          {
-            recentPosts.map((post) => (
-              <li>
-                <a
-                  class="inline-block"
-                  href={`/${slugDate(post.data.date.toISOString())}${createSlug(
-                    post.data.title
-                  )}/`}
-                >
-                  <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
-                </a>
-                <div class="flex items-center space-x-2 uppercase">
-                  <time datetime={post.data.date.toISOString()}>
-                    {post.data.date.toLocaleDateString('en-gb', {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric',
-                    })}
-                  </time>
-                </div>
-              </li>
-            ))
-          }
-          <li>
-            <a href="/posts">
-              <h3 class="mb-2 mt-6 font-normal">
-                All Posts <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="inline"
-                  ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
-                    points="12 5 19 12 12 19"></polyline></svg
-                >
-              </h3>
-            </a>
-          </li>
-        </ul>
-      </section>
+    <main>
+      <div class="post-list" style="grid-template-rows: auto 1fr">
+        <div class="xl:col-span-3 xl:row-span-2 xl:pb-0">
+          <div class="prose lg:prose-lg mx-auto max-w-none">
+            <section>
+              <h2 class="mt-7 mb-0">Recent Posts</h2>
+              <ul class="p-0 m-0 mb-6 list-none">
+                {
+                  recentPosts.map((post) => (
+                    <li>
+                      <a
+                        class="inline-block"
+                        href={`/${slugDate(
+                          post.data.date.toISOString()
+                        )}${createSlug(post.data.title)}/`}
+                      >
+                        <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
+                      </a>
+                      <div class="flex items-center space-x-2 uppercase">
+                        <time datetime={post.data.date.toISOString()}>
+                          {post.data.date.toLocaleDateString('en-gb', {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric',
+                          })}
+                        </time>
+                      </div>
+                    </li>
+                  ))
+                }
+                <li>
+                  <a href="/posts">
+                    <h3 class="mb-2 mt-6 font-normal">
+                      All Posts <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="inline"
+                        ><line x1="5" y1="12" x2="19" y2="12"></line><polyline
+                          points="12 5 19 12 12 19"></polyline></svg
+                      >
+                    </h3>
+                  </a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
     </main>
     <Footer />
   </body>
