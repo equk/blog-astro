@@ -1,7 +1,6 @@
 ---
 layout: '../layouts/PageMarkdown.astro'
 title: 'Projects'
-description: ''
 heroImage: '/media/images/rasppis_banner.webp'
 ---
 

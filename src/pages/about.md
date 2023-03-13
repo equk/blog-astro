@@ -1,7 +1,6 @@
 ---
 layout: '../layouts/PageMarkdown.astro'
 title: 'About Me'
-description: 'Lorem ipsum dolor sit amet'
 heroImage: ''
 ---
 
