@@ -35,69 +35,75 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   <body>
     <Header />
     <TopBanner />
-    <main class="w-full max-w-4xl">
-      <section>
-        <div
-          class="flex justify-center border-b-2 border-slate-200 px-3 pt-6 pb-3 dark:border-slate-700/40"
-        >
-          <h2 class="mb-2 mt-6 font-normal">All Posts</h2>
+    <main>
+      <div class="post-list" style="grid-template-rows: auto 1fr">
+        <div class="xl:col-span-3 xl:row-span-2 xl:pb-0">
+          <div class="prose lg:prose-lg mx-auto max-w-none">
+            <section>
+              <div
+                class="flex justify-center border-b-2 border-slate-200 px-3 pt-6 pb-3 dark:border-slate-700/40"
+              >
+                <h2 class="mb-2 mt-6 font-normal">All Posts</h2>
+              </div>
+              <ul class="mb-6 list-none">
+                {
+                  page.data.map((post: typeof posts) => (
+                    <li>
+                      <a
+                        class="inline-block"
+                        href={`/${slugDate(
+                          post.data.date.toISOString()
+                        )}${createSlug(post.data.title)}/`}
+                      >
+                        <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
+                      </a>
+                      <div class="flex items-center space-x-2 uppercase">
+                        <time datetime={post.data.date.toISOString()}>
+                          {post.data.date.toLocaleDateString('en-gb', {
+                            day: 'numeric',
+                            month: 'long',
+                            year: 'numeric',
+                          })}
+                        </time>
+                      </div>
+                    </li>
+                  ))
+                }
+              </ul>
+              <div
+                class="pagination flex justify-center border-t-2 border-slate-200 px-3 py-2 dark:border-slate-700/40"
+              >
+                {
+                  (page.url.prev || page.url.next) && (
+                    <nav class="flex items-center gap-x-8">
+                      {page.url.prev ? (
+                        <a
+                          href={page.url.prev}
+                          class="mr-auto py-2 sm:hover:text-accent"
+                        >
+                          Previous
+                        </a>
+                      ) : (
+                        <p>Previous</p>
+                      )}
+                      {page.url.next ? (
+                        <a
+                          href={page.url.next}
+                          class="mr-auto py-2 sm:hover:text-accent"
+                        >
+                          Next
+                        </a>
+                      ) : (
+                        <p>Next</p>
+                      )}
+                    </nav>
+                  )
+                }
+              </div>
+            </section>
+          </div>
         </div>
-        <ul class="mb-6 list-none">
-          {
-            page.data.map((post: typeof posts) => (
-              <li>
-                <a
-                  class="inline-block"
-                  href={`/${slugDate(post.data.date.toISOString())}${createSlug(
-                    post.data.title
-                  )}/`}
-                >
-                  <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
-                </a>
-                <div class="flex items-center space-x-2 uppercase">
-                  <time datetime={post.data.date.toISOString()}>
-                    {post.data.date.toLocaleDateString('en-gb', {
-                      day: 'numeric',
-                      month: 'long',
-                      year: 'numeric',
-                    })}
-                  </time>
-                </div>
-              </li>
-            ))
-          }
-        </ul>
-        <div
-          class="pagination flex justify-center border-t-2 border-slate-200 px-3 py-2 dark:border-slate-700/40"
-        >
-          {
-            (page.url.prev || page.url.next) && (
-              <nav class="flex items-center gap-x-8">
-                {page.url.prev ? (
-                  <a
-                    href={page.url.prev}
-                    class="mr-auto py-2 sm:hover:text-accent"
-                  >
-                    Previous
-                  </a>
-                ) : (
-                  <p>Previous</p>
-                )}
-                {page.url.next ? (
-                  <a
-                    href={page.url.next}
-                    class="mr-auto py-2 sm:hover:text-accent"
-                  >
-                    Next
-                  </a>
-                ) : (
-                  <p>Next</p>
-                )}
-              </nav>
-            )
-          }
-        </div>
-      </section>
+      </div>
     </main>
     <Footer />
   </body>
