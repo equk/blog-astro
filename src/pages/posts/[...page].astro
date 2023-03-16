@@ -48,14 +48,14 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
               <ul class="mb-6 list-none">
                 {
                   page.data.map((post: typeof posts) => (
-                    <li>
+                    <li class="mt-4">
                       <a
                         class="inline-block"
                         href={`/${slugDate(
                           post.data.date.toISOString()
                         )}${createSlug(post.data.title)}/`}
                       >
-                        <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
+                        <h3 class="mb-1 mt-0 font-normal">{post.data.title}</h3>
                       </a>
                       <div class="flex items-center space-x-2 uppercase">
                         <time datetime={post.data.date.toISOString()}>

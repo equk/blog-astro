@@ -34,14 +34,14 @@ const recentPosts = posts.slice(0, siteConfig.postsRecent)
               <ul class="p-0 m-0 mb-6 list-none">
                 {
                   recentPosts.map((post) => (
-                    <li>
+                    <li class="mt-4">
                       <a
                         class="inline-block"
                         href={`/${slugDate(
                           post.data.date.toISOString()
                         )}${createSlug(post.data.title)}/`}
                       >
-                        <h3 class="mb-2 mt-6 font-normal">{post.data.title}</h3>
+                        <h3 class="mb-1 mt-0 font-normal">{post.data.title}</h3>
                       </a>
                       <div class="flex items-center space-x-2 uppercase">
                         <time datetime={post.data.date.toISOString()}>
@@ -57,7 +57,7 @@ const recentPosts = posts.slice(0, siteConfig.postsRecent)
                 }
                 <li>
                   <a href="/posts">
-                    <h3 class="mb-2 mt-6 font-normal">
+                    <h3 class="mb-2 mt-4 font-normal">
                       All Posts <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"

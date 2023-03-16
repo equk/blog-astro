@@ -82,9 +82,10 @@ nav a {
 
   main .post-content,
   main .post-list {
-    @apply mx-auto max-w-4xl pb-8;
+    @apply mx-auto max-w-4xl;
   }
 
+  main .post-content,
   main .hero-image {
     @apply pb-8;
   }
